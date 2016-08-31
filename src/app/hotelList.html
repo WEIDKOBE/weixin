@@ -1,0 +1,112 @@
+﻿<html>
+<head>
+  <title>酒店信息</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body class="bodybg">
+  <div id="common-load">
+  <div id="common-load-bg"></div>
+  <div id="common-load-icon"></div>
+  <div id="common-load-icon1"></div>
+</div>
+<div id="nav">
+  <div class="nav-item" id="order">
+    <a href="./orderList.html">订单</a>
+  </div>
+  <div class="nav-item nav-item-selected" id="room">
+    <a href="./hotelList.html">酒店信息</a>
+  </div>
+  <div class="nav-item" id="settlement">
+    <a href="./settlement.html">结算</a>
+  </div>
+  <div class="nav-item" id="account">
+    <a href="./accountHome.html">账号</a>
+  </div>
+</div>
+<div id="navPlaceHolder"></div>
+  <!--<div class="text">-->
+    <!--<input type="text" id="hotelName">-->
+  <!--</div>-->
+    <!-- <div class=hotel-supply-latitude> -->
+
+      <!-- <div class=hotel-supply-latitude-input id="hotel-search">
+         <div class=hotel-info-search-icon></div>
+         <div class=hotel-info-search-txt>请输入酒店名称</div>
+      </div> -->
+    <!-- </div> -->
+    <div id="global-list" style="border-top:1px solid #DDDFDF;">
+      <div class="photel-li" style="padding:0 0 0 10px;margin-top:7px;background-color:#F8F8F8;">
+          <div class="photel-li-name" style="padding-top:11px;">
+                供应商维度配置
+          </div>
+          <div >
+               <div class="hotel-info-search-icon"></div>
+          </div>
+       </div>
+   </div>
+   <div id="global-list">
+      <div class="photel-li" id="close-room">
+          <div class="photel-li-name">
+                全部关闭当日房
+          </div>
+          <div class="photel-li-switch">
+               <div class="switcha all"></div>
+          </div>
+       </div>
+       <!-- <div class="photel-li" id="message-remind" style="display:none">
+          <div class="photel-li-name">
+                短信官方提醒功能
+          </div>
+          <div class="photel-li-switch">
+               <div class="switcha"></div>
+          </div>
+       </div> -->
+   </div>
+   <div class="photel-li-head" style="font-size:16px;background-color:#F8F8F8;padding: 0 10px 0 10px;height:30px;line-height:30px;">
+       酒店
+   </div>
+
+
+
+  <div id="hotel-list">
+    <!-- tmpl -->
+  </div>
+  <script type="text/template" id="listTmpl">
+    <% if (it.length<=0) { %>
+      <div class="porderNoList">无</div>
+    <% } else {
+      for (var i = 0, l = it.length; i < l; i++) {
+        var hotel = it[i];
+    %>
+      <div class="photel-li" >
+        <div class="photel-li-name" data-id="<%= hotel.id %>"  data-name="<%= hotel.name %>"><%= hotel.name %></div>
+        <div class="photel-li-switch">
+          <% if (hotel.isOnline == 0) { %>
+            <div class="switcha" data-id="<%= hotel.id %>"
+          data-name="<%= hotel.name %>"></div>
+          <% } else { %>
+            <div class="switcha switcha-on" data-id="<%= hotel.id %>"
+          data-name="<%= hotel.name %>"></div>
+          <% } %>
+        </div>
+       <!--  <div class="photel-li-editWrap">
+         <div class="photel-li-edit"
+           data-id="<%= hotel.id %>"
+           data-name="<%= hotel.name %>"
+         >
+           <div class=hotel-info-edit-icon></div>
+         </div>
+       </div> -->
+      </div>
+    <% }}%>
+  </script>
+  <script src="/supplier/scripts/lib/lib.js"></script>
+  <script src="/supplier/scripts/common/common.js"></script>
+  <script src="./scripts/hotelList.js"></script>
+ <script src="./scripts/hotelListA.js"></script>
+</body>
+</html>

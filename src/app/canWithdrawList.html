@@ -1,0 +1,107 @@
+<html>
+<head>
+<head>
+  <title>可提现</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+</head>
+<body class="bodybg">
+  <div id="common-load">
+  <div id="common-load-bg"></div>
+  <div id="common-load-icon"></div>
+  <div id="common-load-icon1"></div>
+</div>
+
+  <div id="app">
+    <!-- <div id="pHead">
+      <div id="pHeadArrow"></div>
+      <div id="pHeadTitle">可提现</div>
+    </div>
+    <div id="pHeadPlaceHolder"></div> -->
+    <div id="pAccountTop">
+      <div id="pAccountPrice"></div>
+      <div id="pAccountExplain">可提现</div>
+    </div>
+    <div id="ptabs" class="hidden">
+      <div class="ptab pselect">销售业绩</div>
+      <div class="ptab">订单</div>
+    </div>
+    <div id="porderListWrap">
+      <div class="porderList hidden" id="saleFeatList"></div>
+      <div class="porderList hidden" id="saleOrderList"></div>
+      <div id="ptableLoading"></div>
+    </div>
+
+  </div>
+  <div class="fiedPlace"></div>
+  <div class="fixed">
+    <div id="btn_save">
+      可提现:
+      <span id="pAccountPrice1"></span>
+    </div>
+  </div>
+  <div id="confirm-window">
+    <div id="info-panel">
+      <div style="line-height:2;padding:20px">
+        是否立即提现
+        <span id="alert-money"></span>
+        元
+      </div>
+      <div style="height:50px;border-top: solid 2px rgb(229,229,229)">
+        <div id="confirm-button" class="forcelogin" style="background-color:rgb(2,179,207);border-radius:0px 0px 0px 10px;color:white">确定</div>
+        <div id="cancel-button" class="forcelogin" style="color:black">取消</div>
+      </div>
+    </div>
+  </div>
+  <script type="text/template" id="featTmpl">
+    <% if (it.length<=0) { %>
+      <div class="porderNoList">无</div>
+    <% } else {
+      for (var i = 0, l = it.length; i < l; i++) {
+        var order = it[i];
+    %>
+      <div class="salebox">
+        <div class="saleboxL"><%= order.supplierName %></div>
+        <div class="saleboxC"><%= order.orderCount %>个订单，可提现</div>
+        <div class="saleboxR">￥<%= order.totalPrice %></div>
+      </div>
+    <% }}%>
+  </script>
+  <script type="text/template" id="orderTmpl">
+    <% if (it.length<=0) { %>
+      <div class="porderNoList">无</div>
+    <% } else {
+      for (var i = 0, l = it.length; i < l; i++) {
+        var order = it[i];
+    %>
+     <div class="pol" data-id="<%= order.id %>" style="display:block;">
+           <div class="pol-hotelname" style="color:#333;"><%= order.hotelName %></div>
+           <div class="pol-hotelinfo" style="color:#333;">
+               <%= order.roomtypeName %>
+                /
+                <%= order.bedtype %>
+                /
+                <%= order.breakfastQty %>
+           </div>
+           <div class="pol-hoteltime" style="color:#333333;">
+                <%= order.arrivedate %>-<%= order.leavedate %>
+                (<%= order.dateCount %>晚)
+           </div>
+          <div style="margin-top:5px;color:#000000;">
+             <div style="display:inline-block;">
+                <span class="pol-passagername" style="color:#333;"><%= order.saleName %></span>
+                <span class="pol-hotelprice" style="font-size:17px;">￥<%= order.supplierPrice %></span>
+             </div>
+            <div class="pol-hotelstatus" style="line-height:24px;display:inline-block;right: 10px;position: absolute;"><%= order.finalStatus %></div>
+           </div>
+    </div>
+    <% }}%>
+  </script>
+  <script src="/supplier/scripts/lib/lib.js"></script>
+  <script src="/supplier/scripts/common/common.js"></script>
+  <script src="/supplier/scripts/canWithdrawList.js"></script>
+</body>
+</html>

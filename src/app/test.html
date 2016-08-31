@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>Insert title here</title>
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://pub.xiayizhan.mobi/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<script type="text/javascript">
+var cfg1 = {
+		url:'rest/hotel/getHotelInfo',
+        type: 'POST', 
+        data: JSON.stringify({"version":111,"body":{"hotelId":1,"status":2}}), 
+        dataType: 'json',
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+var cfg2 = {
+		url:'rest/order/addOrderInfo',
+        type: 'POST', 
+        data: JSON.stringify({"name":"yuan","phone":"18210185829","wxId":"123456789","roomStatusId":1,"roomCount":1,"arrivedate":"2015-04-23","leavedate":"2015-04-25","costScore":10}), 
+        dataType: 'json',
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+var cfg3 = {
+		url:'rest/order/getOrderList',
+        type: 'POST', 
+        data: JSON.stringify({"hotelId":1,"status":2}), 
+        dataType: 'json',
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+var cfg4 = {
+		url:'rest/order/confirmOrder',
+        type: 'POST', 
+        data: JSON.stringify({"id":106,"hotelConfirmNo":"XXXX说说95"}), 
+        dataType: 'json',
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+var cfg5 = {
+		url:'rest/supplier/login',
+        type: 'POST', 
+        data: JSON.stringify({"phone":"15652018591","verificationCode":"123456"}), 
+        dataType: 'json',
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+var cfg6 = {
+		url:'rest/order/getHotelOrder',
+        type: 'POST', 
+        data: JSON.stringify({"id":66}), 
+        dataType: 'json',
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+var cfg7 = {
+		url:'rest/order/rejectOrder',
+        type: 'POST', 
+        data: JSON.stringify({"id":180,"refuseMsg":"就是不想给你住"}), 
+        dataType: 'json',
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+
+var cfg8 = {
+		url:'rest/hotel/addRoomProduct',
+        type: 'POST', 
+        data: JSON.stringify({"hotelId":1,"roomTypeId":2,"breakfastQty":2}), 
+        dataType: 'json',
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+
+var cfg9 = {
+		url:'rest/hotel/addOrModifyRoomStatus',
+        type: 'POST', 
+        data: JSON.stringify({"hotelId":1,"roomtypeId":2,"roomProductId":2,"qtyable":20,"settlementPrice":330,"dateList":['2015-07-02','2015-07-03']}), 
+        dataType: 'json',
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+var cfg10 = {
+		url:'rest/hotel/getRoomTypeList?hotelId=1',
+        type: 'GET', 
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+var cfg11 = {
+		url:'rest/hotel/getRoomProductList?hotelId=1',
+        type: 'GET', 
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+var cfg12 = {
+		url:'rest/hotel/modifyRoomStatus',
+        type: 'POST', 
+        data: JSON.stringify({"id":16,"qtyable":100,"price":20000}), 
+        dataType: 'json',
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+var cfg13 = {
+		url:'rest/hotel/getRoomStatusList?roomProductId=1&months=2015-05,2015-06',
+        type: 'GET', 
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+var cfg14 = {
+		url:'rest/hotel/getHotelList',
+        type: 'POST', 
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+		var cfg15 = {
+		url:'rest/hotel/getRoomStatus?roomProductId=1&date=2014-04-23',
+        type: 'GET', 
+        contentType:'application/json;charset=UTF-8',        
+        success: function(result) { 
+            alert(JSON.stringify(result)); 
+        } 
+    };
+		var cfg16 = {
+				url:'rest/supplier/login',
+		        type: 'POST', 
+		        data: JSON.stringify({"phone":"010789456","verificationCode":"123456","forceLogin":true}), 
+		        dataType: 'json',
+		        contentType:'application/json;charset=UTF-8',        
+		        success: function(result) { 
+		            alert(JSON.stringify(result)); 
+		        } 
+		    };
+		var cfg17 = {
+					url:'rest/supplier/testTransaction',
+			        type: 'GET', 
+			        dataType: 'json',
+			        contentType:'application/json;charset=UTF-8',        
+			        success: function(result) { 
+			            alert(JSON.stringify(result)); 
+			        } 
+			    };
+		var cfg18 = {
+				url:'rest/supplier/getAccountInfo',
+		        type: 'GET', 
+		        dataType: 'json',
+		        contentType:'application/json;charset=UTF-8',        
+		        success: function(result) { 
+		            alert(JSON.stringify(result)); 
+		        } 
+		    };
+		var cfg19 = {
+				url:'rest/order/getRejectReasons',
+		        type: 'GET', 
+		        dataType: 'json',
+		        contentType:'application/json;charset=UTF-8',        
+		        success: function(result) { 
+		            alert(JSON.stringify(result)); 
+		        } 
+		    };
+		var cfg20 = {
+				url:'rest/order/modifyConfirmCode',
+		        type: 'POST', 
+		        data: JSON.stringify({"id":103,"hotelConfirmNo":"123123"}), 
+		        dataType: 'json',
+		        contentType:'application/json;charset=UTF-8',        
+		        success: function(result) { 
+		            alert(JSON.stringify(result)); 
+		        } 
+		    };
+		var cfg21 = {
+				url:'rest/order/orderCanCheckin',
+		        type: 'POST', 
+		        data: JSON.stringify({"orderId": 2886, "confirmCode": "12312312", "roomNumber": "1231","bookingPeople": "sdfsdf","isOneRoomcard": "true"}), 
+		        dataType: 'json',
+		        contentType:'application/json;charset=UTF-8',        
+		        success: function(result) { 
+		            alert(JSON.stringify(result)); 
+		        } 
+		    };
+function getHotelsList(){
+    $.ajax(cfg1);
+}
+function getAttractionsMap(){
+    $.ajax(cfg2);
+}
+function getHotelsDetail(){
+    $.ajax(cfg3);
+}
+function getPriceCount(){
+    $.ajax(cfg4);
+}
+function getTransportationTimeCount(){
+    $.ajax(cfg5);
+}
+function getRatingsCount(){
+    $.ajax(cfg6);
+}
+function getStarCount(){
+    $.ajax(cfg7);
+}
+function getSourcePrice(){
+    $.ajax(cfg8);
+}
+function addRoomStatus(){
+    $.ajax(cfg9);
+}
+function getRoomTypes(){
+    $.ajax(cfg10);
+}
+function getRoomProducts(){
+    $.ajax(cfg11);
+}
+function modifyRoomStatus(){
+    $.ajax(cfg12);
+}
+function getRoomStatusList(){
+    $.ajax(cfg13);
+}
+function getHotelList(){
+    $.ajax(cfg14);
+}
+function getRoomStatus(){
+    $.ajax(cfg15);
+}
+function login(){
+    $.ajax(cfg16);
+}
+function testTransaction(){
+    $.ajax(cfg17);
+}
+function getAccountInfo(){
+    $.ajax(cfg18);
+}
+function getRejectReasons(){
+	 $.ajax(cfg19);
+}
+function modifyConfirmCode(){
+	$.ajax(cfg20)
+}
+function canCheckin(){
+	$.ajax(cfg21)
+}
+</script>
+<body>
+	<fieldset id="inputs">
+		<input type="button" value="获取酒店信息" style="width:500; height:50;" onClick="getHotelsList()" />
+		<input type="button" value="新增订单" style="width:500; height:50;" onClick="getAttractionsMap()" />
+		<input type="button" value="获取订单列表" style="width:500; height:50;" onClick="getHotelsDetail()" />
+		<input type="button" value="确认订单" style="width:500; height:50;" onClick="getPriceCount()" />
+		<input type="button" value="供应商登陆" style="width:500; height:50;" onClick="getTransportationTimeCount()" />
+		<input type="button" value="获取订单详情" style="width:500; height:50;" onClick="getRatingsCount()" />
+		<input type="button" value="拒绝订单" style="width:500; height:50;" onClick="getStarCount()" />
+		<input type="button" value="新增酒店产品" style="width:500; height:50;" onClick="getSourcePrice()" />
+		<input type="button" value="新增房态" style="width:500; height:50;" onClick="addRoomStatus()" />
+		<input type="button" value="获取房型LIST" style="width:500; height:50;" onClick="getRoomTypes()" />
+		<input type="button" value="获取产品LIST" style="width:500; height:50;" onClick="getRoomProducts()" />
+		<input type="button" value="修改房态" style="width:500; height:50;" onClick="modifyRoomStatus()" />
+		<input type="button" value="获取房态集合" style="width:500; height:50;" onClick="getRoomStatusList()" />
+		<input type="button" value="获取酒店LIST" style="width:500; height:50;" onClick="getHotelList()" />
+		<input type="button" value="获取指定房态" style="width:500; height:50;" onClick="getRoomStatus()" />
+		<input type="button" value="登录" style="width:500; height:50;" onClick="login()" />
+		<input type="button" value="事务测试" style="width:500; height:50;" onClick="testTransaction()" />
+		<input type="button" value="获取账户信息" style="width:500; height:50;" onClick="getAccountInfo()" />
+		<input type="button" value="获取拒绝信息" style="width:500; height:50;" onClick="getRejectReasons()" />
+		<input type="button" value="修改酒店确认码" style="width:500; height:50;" onClick="modifyConfirmCode()" />
+		<input type="button" value="可以入住" style="width:500; height:50;" onClick="canCheckin()" />
+	</fieldset>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+<head>
+<head>
+  <title>酒店信息</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="stylesheet" href="./css/roomList.css" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+  <link rel="stylesheet" href="./css/demos.css">
+</head>
+<body class="bodybg">
+  <div id="common-load">
+  <div id="common-load-bg"></div>
+  <div id="common-load-icon"></div>
+  <div id="common-load-icon1"></div>
+</div>
+<div id="nav">
+  <div class="nav-item" id="order">
+    <a href="./orderList.html" >订单</a>
+  </div>
+  <div class="nav-item nav-item-selected" id="room">
+    <a href="./hotelList.html" >酒店信息</a>
+  </div>
+  <div class="nav-item" id="settlement">
+    <a href="./settlement.html" >结算</a>
+  </div>
+  <div class="nav-item" id="account">
+    <a href="./accountHome.html" >账号</a>
+  </div>
+</div>
+<div id="navPlaceHolder"></div>
+
+  <div id="hotelName" style="padding:19px 10px 9px 10px;text-align:center;background-color:#F8F8F8;border-bottom:solid 1px #DDDFDF;color:#333333;"></div>
+  <div id="room-list">
+    <div class="room-item" style="display:none">
+      <table style="width:100%;table-layout: auto">
+       <!--  <tr style="height:10px">
+         <td></td>
+       </tr> -->
+        <tr class="touch">
+        <!--   <td class="roomType">酒店<br/></td> -->
+        <div class="roomType" style="padding:10px 0 10px 10px;width:86%;float:left;text-align:justify;">酒店<br/></div>
+        <div class="delete" style="float:right;vertical-align: middle;"></div>
+        <!--  <td class="roomType" style="width:80%;"></td> -->
+          <td style="width:100%;border-bottom:solid 1px #DDDFDF;border-top:solid 1px #DDDFDF;padding:7px 0 7px 10px;">
+            <!-- <div class="delete" style="display:inline-block">删除</div> -->
+            <a href="javascript:;"  class="pricedata" >价格</a>
+             <a href="javascript:;"  class="edit" >编辑</a>
+            <div class="switch switch-on" style="float:left"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="line" style="height:15px;background-color:#F8F8F8;"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div style="margin-top:50px;text-align:center;background-color:#F8F8F8;margin-bottom:50px;border-bottom: 1px solid #F8F8F8;">
+    <div id="addProductButton" class="button">添加产品</div>
+    <div id="addRoomTypeButton" class="button" style="margin-bottom:50px">添加房型</div>
+  </div>
+  <script src="./scripts/lib/lib.js"></script>
+  <script src="./scripts/common/common.js"></script>
+  <script src="./scripts/roomList.js"></script>
+  <script src="./scripts/lib/jquery-2.1.4.js"></script>
+  <!-- <script src="./scripts/lib/jquery-2.1.4.js"></script> -->
+  <!-- <script src="./scripts/touch-delete.js"></script> -->
+  <!-- <script src="./scripts/lib/jquery.mobile-1.4.5.min.js"></script> -->
+ <!--  <script>
+
+    console.log(document.getElementsByName("line"));
+     $(".touch").on("swipeleft",function(){
+       $(this).addClass('selected').parents(".touch").siblings().find(".item").removeClass('selected');
+
+   }).on("swiperight",function(){
+       $(this).parents(".touch").find(".item").removeClass('selected');
+   })
+  </script> -->
+  <script>
+
+  </script>
+
+</body>
+</html>

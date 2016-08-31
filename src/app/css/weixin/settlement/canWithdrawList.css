@@ -1,0 +1,77 @@
+#title{
+	color:white;
+	font-size:18px;
+	padding:10px;
+	text-align:center;
+}
+
+#back{
+	width: 40px;
+  	background-repeat: no-repeat;
+  	height: 20px;
+  	background-position:10px;
+  	background-image: url(/supplier/images/icon/backto.png);
+  	background-size: 60%;
+}
+
+.item{
+	display:none;
+	color: black;
+	box-sizing: border-box;
+	height: 100px;
+	padding: 5px 10px;
+	border-bottom: solid 1px rgb(136,136,136);
+}
+.name-and-type{
+	height: 20px;
+	padding-top: 10px;
+}
+.name-and-type .hotel-name{
+	float: left;
+	font-size: 15px;
+}
+.name-and-type .room-type{
+	color: rgb(136,136,136);
+	padding-top: 3px;
+	float: left;
+	font-size: 11px;
+}
+.desc{
+	height:40px;
+}
+.desc .date{
+	padding-top: 10px;
+	float: left;
+	font-size: 14px;
+}
+.desc .cause{
+	padding-top: 10px;
+	font-size: 11px;
+	float: left;
+}
+.goto{
+	margin-left: 10px;
+	float: right;
+    margin-top: 5px;
+}
+#total-price{
+	box-sizing:border-box;
+	color:black;
+	font-size:15px;
+	padding:13px;
+	padding-top: 0px;
+	text-align:center;
+	width:100%;
+	position:fixed;
+	bottom:0px;
+	background-color:rgb(246,246,246);
+}
+.forcelogin{
+	height: 50px;
+	float:left;
+	font-size:16px;
+	padding:17px;
+	box-sizing:border-box;
+	width:50%;
+	text-align:center;
+}

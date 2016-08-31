@@ -1,0 +1,64 @@
+.login-icon{
+  float: right;
+  width: 32px;
+  height: 100%;
+  background-image: url(http://rescdn.qqmail.com/dyimg/20131025/710173F6DD8D.jpg);
+  background-position-x: 240px;
+  background-position-y: 268px;
+}
+
+.login-field{
+	width:250px;
+	font-size:14px;
+	padding:10px;
+	margin:auto;
+}
+#phone{
+	border-radius:5px 0px 0px 5px;
+	border:solid 1px rgb(2,179,207);
+	border-right:none;
+}
+
+.error-msg{
+	text-align: left;
+	height:15px;
+	color:rgb(255,152,0);
+	width:250px;
+	font-size:12px;
+	padding:5px 0px 10px 0px;
+	margin:auto;
+}
+
+.send-button{
+	border-radius: 0px 5px 5px 0px;
+	border-top-left-radius: 0px;
+	padding: 14px 7px;
+	border: none;
+	height: 96%;
+	color:white;
+	cursor: pointer;
+	display: inline-block;
+	background-color: rgb(2,179,207);
+	font-size: 12px;
+	width: 80px;
+}
+
+.login{
+  border-radius:5px;
+  color:white;
+  margin-top:30px;
+  text-align: center;
+  padding:13px 11px;
+  font-size: 14px;
+  background-color: rgb(2,179,207);
+  display: block;
+}
+.forcelogin{
+	height: 50px;
+	float:left;
+	font-size:16px;
+	padding:17px;
+	box-sizing:border-box;
+	width:50%;
+	text-align:center;
+}

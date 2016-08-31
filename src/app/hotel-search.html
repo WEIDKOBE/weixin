@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<head>
+  <title>酒店信息</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <!-- <link rel="stylesheet" href="./css/roomList.css" type="text/css"> -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+  <link rel="stylesheet" href="./css/weui.min.css">
+  <!-- <link rel="stylesheet" href="./css/jquery-weui.min.css"> -->
+  <!-- <link rel="stylesheet" href="./css/demos.css"> -->
+ <!--  <link rel="stylesheet" href="./css/normalize.css"> -->
+  <!-- <link rel="stylesheet" href="./css/main.css"> -->
+  <!-- <link rel="stylesheet" href="./css/jquery.autocompleter.css"> -->
+</head>
+<body class="bodybg">
+<div id="nav">
+  <div class="nav-item" id="order">
+    <a href="./orderList.html">订单</a>
+  </div>
+  <div class="nav-item nav-item-selected" id="room">
+    <a href="./hotelList.html">酒店信息</a>
+  </div>
+  <div class="nav-item" id="settlement">
+    <a href="./settlement.html">结算</a>
+  </div>
+  <div class="nav-item" id="account">
+    <a href="./accountHome.html">账号</a>
+  </div>
+</div>
+<div id="navPlaceHolder"></div>
+
+ <div class="weui_search_bar weui_search_focusing" id="search_bar">
+      <form class="weui_search_outer" action="hotelList.html">
+       <div class="weui_search_inner">
+        <i class="weui_icon_search"></i>
+        <!--  <i>查询</i> -->
+          <input type="search" class="weui_search_input" name="nope"  id="nope" placeholder="输入酒店名称"  maxlength="40" required/>
+           <!-- <input type="text" name="nope" id="nope"  maxlength="40" /> -->
+          <a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+        </div>
+        <!-- <label for="search_input" class="weui_search_text" id="search_text">
+          <i class="weui_icon_search"></i>
+          <span>搜索</span>
+        </label> -->
+      </form>
+      <a href="./hotelList.html" id="search_cancel" style="width:32px;height:20px;margin-left:10px;margin-top:4px;color:#333333;">取消</a>
+    </div>
+  <script src="./scripts/lib/lib.js"></script>
+  <script src="./scripts/common/common.js"></script>
+  <!-- <script src="./scripts/roomList.js"></script> -->
+  <script src="./scripts/lib/jquery-2.1.4.js"></script>
+  <script src="./scripts/lib/jquery-weui.js"></script>
+  <script src="./scripts/lib/jquery.min.js"></script>
+  <!-- <script src="./scripts/hotel-search.js"></script> -->
+  <!-- <script src="./scripts/lib/jquery.autocompleter.js"></script> -->
+ <!--  <script src="./scripts/lib/main.js"></script> -->
+  <!-- <script src="./scripts/lib/jquery.autocompleter.min.js"></script> -->
+  <script>
+   $('#nope').focus();
+  </script>
+</body>
+</html>

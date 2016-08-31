@@ -1,0 +1,182 @@
+<html>
+<head>
+<head>
+  <title>修改订单</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="stylesheet" href="./css/modifyOrder.css" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+</head>
+<body class="bodybg">
+  <div id="common-load">
+  <div id="common-load-bg"></div>
+  <div id="common-load-icon"></div>
+  <div id="common-load-icon1"></div>
+</div>
+
+  <div id="main-panel" class="panel">
+    <!-- <div id="pHead">
+      <div id="pHeadArrow"></div>
+      <div id="pHeadTitle">修改订单</div>
+    </div>
+    <div id="pHeadPlaceHolder"></div> -->
+    <div class="orign-order-info sub-panel">
+      <div class="order-detail" style="visibility: hidden">
+        <span>原订单</span>
+        <br>
+        <span class="hotelName"></span>
+        <br>
+        <span class="checkInPeopleName"></span>
+        <br>
+        <span class="roomdetail"></span>
+        /
+        <span class="roomCount">1</span>
+        间
+        <br>
+        入住
+        <span class="arrivedate"></span>
+        &nbsp;&nbsp; 离店
+        <span class="leavedate"></span>
+        &nbsp;&nbsp;
+        <div id="order-detail-price" style="text-align: right;padding-right: 10px;font-size:12px">
+          <span class="total-price" style="font-size:15px"></span>
+          <span class="price-desc"></span>
+        </div>
+      </div>
+    </div>
+    <div class="order-modify-items sub-panel">
+      <div class="order-modify-hotel modify-item">
+        <div class="hotel-info info">
+          <span class="label">酒店：</span>
+          <span class="value"></span>
+        </div>
+        <div class="bed-info info">
+          <span class="label">房型：</span>
+          <span class="value"></span>
+        </div>
+        <div class="goto" style="margin-top:-40px"></div>
+      </div>
+      <div class="order-modify-date modify-item">
+        <div class="date-info info">
+          <span class="label">日期：</span>
+          <span class="value"></span>
+        </div>
+        <div class="goto"></div>
+      </div>
+      <div class="order-modify-room-count modify-item">
+        <div class="room-cont-info info">
+          <span class="label">房间数：</span>
+          <span class="value">
+            <select class="order-modify-room-count-select" style="width:inherit"></select>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="order-collect-price-adjust sub-panel" style="display:none">
+      <div class="collect-price price-change-item">
+        <div class="label">房费到付价</div>
+        <div class="input">
+          <input type="tel" placeholder="￥" id="order-adjust-collect-price"></div>
+      </div>
+    </div>
+    <div class="order-price-adjust sub-panel">
+      <div class="price-refund price-change-item">
+        <div class="checkbox-mark">
+          <div class="mark-big-circle">
+            <div class=""></div>
+          </div>
+        </div>
+        <div class="label">退差价</div>
+        <div class="input">
+          <input type="tel" placeholder="￥" id="order-adjust-refund-price"></div>
+      </div>
+      <div class="price-append price-change-item">
+        <div class="checkbox-mark">
+          <div class="mark-big-circle">
+            <div class=""></div>
+          </div>
+        </div>
+        <div class="label">补差价</div>
+        <div class="input">
+          <input type="tel" placeholder="￥" id="order-adjust-append-price"></div>
+      </div>
+      <div class="price-nochange price-change-item">
+        <div class="checkbox-mark">
+          <div class="mark-big-circle">
+            <div class="mark-small-circle"></div>
+          </div>
+        </div>
+        <div class="label">无差价</div>
+      </div>
+    </div>
+    <div class="order-operate-button">
+      <button id="main-panel-save">保存</button>
+      <button id="main-panel-cancel">取消</button>
+    </div>
+  </div>
+  <div id="change-product-panel" class="panel" style="display:none">
+    <!-- <div id="pHead">
+      <div id="pHeadArrow"></div>
+      <div id="pHeadTitle">修改产品</div>
+    </div>
+    <div id="pHeadPlaceHolder"></div> -->
+    <div class="product-list-panel sub-panel" style="margin-bottom: 80px">
+      <div class="product-list-item" style="display:none">
+        <div class="hotel-info">
+          <div class="hotel-name"></div>
+          <div class="operate-mark expand"></div>
+        </div>
+        <ul class="product-list" style="display:none">
+          <li class="product-item">
+            <div class="checkbox-mark">
+              <div class="mark-big-circle">
+                <div class=""></div>
+              </div>
+            </div>
+            <div class="label"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="order-operate-button" style="position: fixed;bottom: 0px;width: 100%;background-color: white;margin: 0px;padding: 15px 0px">
+      <button id="change-product-panel-save">保存</button>
+      <button id="change-product-panel-cancel">取消</button>
+    </div>
+  </div>
+  <div id="change-date-panel" class="panel" style="display:none">
+    <!-- <div id="pHead">
+      <div id="pHeadArrow"></div>
+      <div id="pHeadTitle">修改日期</div>
+    </div>
+    <div id="pHeadPlaceHolder"></div> -->
+    <div class="order-date-select sub-panel">
+      <div class="date-select-item">
+        入住日期：
+        <input class="arriveDate" type="date"></div>
+      <div id="arriveDateTips" class="warn-tips">入住日期必须大于等于今天</div>
+      <div class="date-select-item">
+        离店日期：
+        <input class="leaveDate" type="date"></div>
+      <div id="leaveDateTips" class="warn-tips">离店日期必须大于入住日期</div>
+    </div>
+    <div class="order-operate-button">
+      <button id="change-date-panel-save">保存</button>
+      <button id="change-date-panel-cancel">取消</button>
+    </div>
+  </div>
+  <div id="confirm-window">
+    <div id="info-panel">
+      <div style="line-height:2;padding:20px"></div>
+      <div style="height:50px;border-top: solid 2px rgb(229,229,229)">
+        <div id="confirm-button" class="forcelogin" style="background-color:rgb(2,179,207);border-radius:0px 0px 0px 10px;color:white">是</div>
+        <div id="cancel-button" class="forcelogin" style="color:black">否</div>
+      </div>
+    </div>
+  </div>
+  <script src="/supplier/scripts/lib/lib.js"></script>
+  <script src="/supplier/scripts/common/common.js"></script>
+  <script src="/supplier/scripts/modifyOrder.js"></script>
+</body>
+</html>

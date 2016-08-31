@@ -1,0 +1,50 @@
+<html>
+<head>
+<head>
+  <title>收款纪录</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+</head>
+<body class="bodybg">
+  <div id="common-load">
+  <div id="common-load-bg"></div>
+  <div id="common-load-icon"></div>
+  <div id="common-load-icon1"></div>
+</div>
+
+  <div id="app">
+    <!-- <div id="pHead">
+      <div id="pHeadArrow"></div>
+      <div id="pHeadTitle">收款纪录</div>
+    </div>
+    <div id="pHeadPlaceHolder"></div> -->
+    <div id="pAccountTop">
+      <div id="pAccountPrice"></div>
+      <div id="pAccountExplain">已收款</div>
+    </div>
+    <div class="porderList hidden" id="saleFeatList"></div>
+  </div>
+  <script type="text/template" id="featTmpl">
+    <% if (it.length<=0) { %>
+      <div class="porderNoList">无</div>
+    <% } else {
+      for (var i = 0, l = it.length; i < l; i++) {
+        var order = it[i];
+    %>
+      <div class="psettlement-li" data-id="<%= order.id %>">
+        <div class="psettlement-li-label"><%= order.time %></div>
+        <div class="psettlement-li-main">
+          订单提现总金额：<%= order.price %>元
+          <span class="iconRightArrow"></span>
+        </div>
+      </div>
+    <% }}%>
+  </script>
+  <script src="/supplier/scripts/lib/lib.js"></script>
+  <script src="/supplier/scripts/common/common.js"></script>
+  <script src="/supplier/scripts/hadSettledRecordList.js"></script>
+</body>
+</html>

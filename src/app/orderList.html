@@ -1,0 +1,398 @@
+<html>
+<head>
+<head>
+  <title>订单</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="stylesheet" href="./css/orderList.css" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+</head>
+<body class="bodybg">
+  <div id="common-load">
+  <div id="common-load-bg"></div>
+  <div id="common-load-icon"></div>
+  <div id="common-load-icon1"></div>
+</div>
+<div id="nav">
+  <div class="nav-item nav-item-selected" id="order">
+    <a href="./orderList.html">订单</a>
+  </div>
+  <div class="nav-item" id="room">
+    <a href="./hotelList.html">酒店信息</a>
+  </div>
+  <div class="nav-item" id="settlement">
+    <a href="./settlement.html">结算</a>
+  </div>
+  <div class="nav-item" id="account">
+    <a href="./accountHome.html">账号</a>
+  </div>
+</div>
+<div id="navPlaceHolder"></div>
+
+  <!-- <div class="select-parent">
+    <select id="my-hotels"></select>
+  </div> -->
+  <div id="order-tab" style="display:none">
+    <div class="norder-item norder-select" value="20">未确认</div>
+    <div class="norder-item" value="17">待办入住</div>
+    <div class="norder-item" value="118">待审核</div>
+    <div class="norder-item" value="0">全部</div>
+    <div id="order_filter" class="norder-item-one">
+      <div id="order_icon_filter"></div>
+      <div id="order_txt_filter">筛选</div>
+    </div>
+  </div>
+  <div class="order-tab-border"></div>
+  <div id="order_filter_tips"></div>
+  <div id="order-list" style="display:none">
+    <!-- <div class="order-item myorderItem" style="display:none">
+      <table style="height:80px">
+        <tr>
+          <td class="hotelName" style="width:75%"></td>
+          <td style="font-size: 12px;padding: 0px">
+            <div class="guestName"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="roomCondition"></td>
+          <td style="font-size: 16px;padding: 0px">
+            <div class="myorderPrice"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="orderDate"></td>
+          <td style="font-size: 12px;padding: 0px;position: relative;">
+            <div class="orderStatus list-new-message-mark"></div>
+          </td>
+        </tr>
+      </table>
+      <div class="goto"></div>
+    </div>-->
+
+    <div class="order-item myorderItem" style="display:none">
+           <div class="hotelName"></div>
+           <div class="roomCondition"></div>
+           <div class="orderDate" style="color:#333333;"></div>
+           <div style="margin-top:5px;color:#000000;">
+             <div style="display:inline-block;">
+                <span class="guestName"></span>
+                <span class="myorderPrice" style="font-size:17px;"></span>
+             </div>
+             <div class="orderStatus" style="display:inline-block;right: 10px;position: absolute;"></div>
+           </div>
+    </div>
+
+  </div>
+  <div id="myorder-more">
+    <div id="myorder-loading"></div>
+    加载中...
+  </div>
+  <div id="myorder-moreNo">没有更多订单了</div>
+
+  <!-- 筛选页面 -->
+  <div id="order_filter_wrap">
+    <div class="citySelector-w">
+      <div class="citySelector-section">
+        <div class="citySelector-main">
+            <div class="citySelector-citys">
+              <div class="citySelector-city citySelector-city-selected" id="order_hotel" data-content="order_hotel_area" data-type="hotel">
+                酒店
+                <div class="common-border"></div>
+              </div>
+              <div class="citySelector-city" id="order_seller"  data-content="order_seller_area" data-type="seller">
+                销售
+                <div class="common-border"></div>
+              </div>
+            </div>
+        </div>
+        <div class="citySelector-sub">
+          <div class="citySelector-areas" id="order_hotel_area" style="display:block;">
+
+          </div>
+          <div class="citySelector-areas" id="order_seller_area">
+
+          </div>
+        </div>
+      </div>
+      <div class="common-border citySelector-bottom-border"></div>
+      <div class="common-btn-complete1 citySelector-btn" id="order_btn">确定</div>
+    </div>
+  </div>
+  <div id="order-detail-type1" style="display:none;/*width:80%*/;margin:auto">
+    <div>
+      <h4 class="status"></h4>
+    </div>
+    <div class="order-detail">
+      <span class="label">订单号&nbsp;:</span>
+      <div class="right-style">
+        <span id='orderNo' class="orderNo" style=""></span>
+      </div>
+      <br>
+      <span class="label">酒&nbsp;&nbsp;&nbsp;店&nbsp;:</span>
+      <div class="right-style">
+          <span class="hotelName"></span>
+      </div>
+      <br>
+      <span class="label">入住人&nbsp;:</span>
+      <div class="right-style">
+        <span class="checkInPeopleName"></span>
+      </div>
+      <span class="modifyGuest"></span>
+      <br>
+      <span class="label">房&nbsp;&nbsp;&nbsp;型&nbsp;:</span>
+      <div  class="right-style">
+      <span class="roomdetial"></span>
+      /
+      <span class="roomCount"></span>
+      间/
+      <span class="bedtypePrefer"></span>
+      </div>
+      <br>
+      <span class="label">日&nbsp;&nbsp;&nbsp;期&nbsp;:</span>
+      <div class="right-style">
+      <span class="arrivedate"></span>
+      入住
+      <span class="leavedate"></span>离店
+      </div>
+      <br>
+      <span class="label">销&nbsp;&nbsp;&nbsp;售&nbsp;:</span>
+      <div class="right-style">
+        <span class="handleSupplierName"></span>
+      </div>
+      <br>
+      <div id="check-add" style="padding-right:15px;">
+      <div>
+         <span  id="arrivelate" class="label">最晚到店&nbsp;:</span>
+         <div class="right-style">
+           <span class="arrivetimelate"></span>
+         </div>
+      </div>
+     <div>
+        <span  id="paymethod" class="label">付款方式&nbsp;:</span>
+        <div class="right-style">
+          <span class="paymentMethod"></span>
+        </div>
+     </div>
+     <div>
+      <span  id="vouchmethod" class="label">担保方式&nbsp;:</span>
+      <div class="right-style">
+        <span class="suretyMode" id="suretyMode">无</span>
+      </div>
+     </div>
+      <div id="order-detail-price1" style="text-align: left;padding-right: 10px;">
+        <span>总额&nbsp;:</span>
+        <div class="right-style">
+          <span id="totalPrice" style="font-size:15px">￥0</span>
+        </div>
+      </div>
+      <div>
+      <span  id="vouchsum" class="label">担保金额&nbsp;:</span>
+      <div class="right-style">
+         <span class="suretyPrice" id="suretyPrice">无</span>
+      </div>
+      </div>
+      <div>
+      <span  id="servermoney" class="label">服务费&nbsp;:</span>
+      <div class="right-style">
+        <span class="supplierPrice" id="supplierPrice">无</span>
+      </div>
+      </div>
+      <div>
+      <span  id="arrivemoney" class="label">到付&nbsp;:</span>
+      <div class="right-style">
+        <span class="collectPrice" id="collectPrice">无</span>
+      </div>
+      </div>
+      </div>
+      <div id="order-detail-price" style="display:none;text-align: right;margin-top:5px;">
+        <span class="total-price" style="font-size:17px;"></span>
+        <span class="price-desc"></span>
+      </div>
+    </div>
+    <div style="width:100%;text-align:right;box-sizing: border-box;padding-right: 10px">
+      <div id="operateA" class="operate-item">
+        <button class="button">同意修改</button>
+      </div>
+      <div id="operateB" class="operate-item">
+        <button class="button">拒绝修改</button>
+      </div>
+      <div id="operate8" class="operate-item">
+        <button class="button">同意取消</button>
+      </div>
+      <div id="operate9" class="operate-item">
+        <button class="button">拒绝取消</button>
+      </div>
+    </div>
+    <div style="width:100%;text-align:right;box-sizing: border-box;padding-right:10px;border-bottom:1px solid #d8d8d8;">
+      <div class="operate-item" id="check_live_btn_p" style='display:none;'>
+          <button class="button" id="check_live_btn" style='border-radius:3px'>审核入住</button>
+      </div>
+      <div class="operate-item">
+          <button class="button" id="change_handler_btn">转交订单</button>
+      </div>
+      <div class="operate-item">
+        <button class="button" id="set_product_btn">更新房态</button>
+      </div>
+      <div class="operate-item">
+        <button class="contactCustomer button button-new-message-mark" id="lianxis">联系买家</button>
+      </div>
+      <div class="operate-item">
+        <a href="tel:15392968762">
+          <button class="button" id="phone_client">联系客服</button>
+        </a>
+      </div>
+    </div>
+    <div id="check-live-content" style="display:none">
+       <div style="position:absolute;top:13px;width:100%;">
+           <div style="position:absolute;left:10px;width:50%;">
+              <span  id="checkone" class="checkone-next choiceIcon"></span>
+              <span style="position: absolute;left:28px;line-height:22px;">确认入住</span>
+           </div>
+          <div style="position:absolute;left:50%;width:50%;">
+               <span id="checktwo" class="checktwo-next choiceIcon choiceIconSelect"></span>
+               <span style="position: absolute;left:28px;line-height:22px;">未入住</span>
+          </div>
+       </div>
+       <div style="position:absolute;top:40px;width:100%;">
+          <span style="position:absolute;top:0px;left:10px;">备注</span>
+          <textarea id="check-text" style="resize:none;margin:5px 10px 0 48px;width:82%;line-height:20px;border-radius:4px;height:45px;border-color: #02b3cf;"> </textarea>
+       </div>
+       <div style="position:absolute;top:105px;width:100%;height:33px;display: -webkit-box;margin-bottom:10px;">
+            <div id="cancel" class="norder-item" value="20" style="border-radius:4px 0 0 4px;height:33px;line-height:33px;border: 1px solid #02b3cf;overflow-x:hidden;margin-left:10px;">取消</div>
+            <div id="certain" class="norder-item norder-select" value="0" style="border-radius:0 4px 4px 0;height:33px;line-height:33px;border: 1px solid #02b3cf;overflow-x:hidden;margin-right:10px;">确认</div>
+       </div>
+    </div>
+    <div id="live-condition">
+      <div style="text-align:center;font-size:15px;padding-top:15px">客人入住条件</div>
+      <div class="condition-item">
+        <div class="check-item">
+          <table>
+            <tr>
+              <td style="width:10px">
+                <input value="0" class="confirm-no-check" type="checkbox"></td>
+              <td>确认号：客户办理入住时，若酒店查不到订单，可凭此确认号入住。</td>
+            </tr>
+          </table>
+        </div>
+        <div class="addition operate-item" style="width:70%">
+          <div style="height:31px">
+            <div style="font-size: 14px;padding: 0px 8px;height: 30px;line-height: 30px;float: left;background-color: rgb(246,246,246)">确认号</div>
+            <div style="margin-left: -105px;overflow: hidden;width: 100%;min-width: 100px;float:left">
+              <input placeholder="不可省略" class="condition-confirm-no" style="outline: none;border: none;width: 99%;font-size: 14px;height: 30px;line-height: 30px;box-sizing: border-box;padding: 0px 10px;margin-left: 107px" maxlength="256"></div>
+          </div>
+        </div>
+      </div>
+      <div class="condition-item">
+        <div class="check-item">
+          <table>
+            <tr>
+              <td style="width:10px">
+                <input value="1" class="room-no-check" type="checkbox"></td>
+              <td>房间号：客户办理入住时，必须告知酒店前台，房间号是多少。</td>
+            </tr>
+          </table>
+        </div>
+        <div class="addition operate-item" style="width:70%">
+          <div style="height:31px">
+            <div style="font-size: 14px;padding: 0px 8px;height: 30px;line-height: 30px;float: left;background-color: rgb(246,246,246)">房间号</div>
+            <div style="margin-left: -105px;overflow: hidden;width: 100%;min-width: 100px;float:left">
+              <input placeholder="不可省略" class="condition-room-no" style="outline: none;border: none;width: 99%;font-size: 14px;height: 30px;line-height: 30px;box-sizing: border-box;padding: 0px 10px;margin-left: 107px" maxlength="45"></div>
+          </div>
+        </div>
+      </div>
+      <div class="condition-item">
+        <div class="check-item">
+          <table>
+            <tr>
+              <td style="width:10px">
+                <input value="2" class="person-name-check" type="checkbox"></td>
+              <td>预订人：客户办理入住时，必须告知酒店前台，房间由此人预定。</td>
+            </tr>
+          </table>
+        </div>
+        <div class="addition operate-item" style="width:70%">
+          <div style="height:31px">
+            <div style="font-size: 14px;padding: 0px 8px;height: 30px;line-height: 30px;float: left;background-color: rgb(246,246,246)">预订人</div>
+            <div style="margin-left: -105px;overflow: hidden;width: 100%;min-width: 100px;float:left">
+              <input placeholder="不可省略" class="condition-person-name" style="outline: none;border: none;width: 99%;font-size: 14px;height: 30px;line-height: 30px;box-sizing: border-box;padding: 0px 10px;margin-left: 107px" maxlength="256"></div>
+          </div>
+        </div>
+      </div>
+      <div class="condition-item">
+        <div class="check-item">
+          <table>
+            <tr>
+              <td style="width:10px">
+                <input value="3" class="regist-one-check" type="checkbox"></td>
+              <td>只能登记1人身份证，领取1张房卡</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <hr></div>
+    <div class="orderOperation" style="width:100%;text-align:right;box-sizing: border-box;padding: 10px">
+      <div id="operate-confirm-no" class="operate-item" style="display:block;border:none;width:300px;margin:8px auto">
+        <table style="margin: 0px auto;box-sizing: border-box;border: solid 1px rgb(216,216,216);width: 100%">
+          <tr>
+            <td style="text-align: center;width: 30%;background-color:rgb(246,246,246)">确认号</td>
+            <td>
+              <input placeholder="可省略" class="hotelConfirmNoInput" style="outline: none;border: none;font-size: 14px;padding: 10px;width:100%;box-sizing:border-box" maxlength="256"></td>
+          </tr>
+        </table>
+      </div>
+      <div id="operate0" class="operate-item" style="display:none">
+        <button class="button">开始处理</button>
+      </div>
+      <div id="operate1" class="operate-item">
+        <button class="button">办理入住</button>
+      </div>
+      <div id="operate2" class="operate-item">
+        <button class="button">立即确认</button>
+      </div>
+      <div id="operate3" class="operate-item">
+        <button class="button">保存</button>
+      </div>
+      <div id="operate4" class="operate-item">
+        <button class="button">修改订单</button>
+      </div>
+      <div id="operate5" class="operate-item">
+        <button class="button">取消修改</button>
+      </div>
+      <div id="operate6" class="operate-item">
+        <button class="button">提醒支付</button>
+      </div>
+      <div id="operate7" class="operate-item">
+        <button class="button">拒单</button>
+      </div>
+    </div>
+    <div id="order-operate-history" style="display:none">
+      <ul class="order-operate-list">
+        <li class="order-operate-item" style="display:none">
+          <div class="order-operate-passed-mark">
+            <div class="order-operate-current-small-mark"></div>
+          </div>
+          <div class="order-operate-info">
+            <div class="order-operate-status">待入住</div>
+            <div class="order-operate-description">您已确认此订单</div>
+            <div class="order-operate-time">2015-08-20 12:00</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="confirm-window">
+    <div id="info-panel">
+      <div style="line-height:2;padding:20px"></div>
+      <div style="height:50px;border-top: solid 2px rgb(229,229,229)">
+        <div id="confirm-button" class="forcelogin" style="background-color:rgb(2,179,207);border-radius:0px 0px 0px 10px;color:white">是</div>
+        <div id="cancel-button" class="forcelogin" style="color:black">否</div>
+      </div>
+    </div>
+  </div>
+  <script src="/supplier/scripts/lib/lib.js"></script>
+  <script src="./scripts/common/common.js"></script>
+  <script src="./scripts/orderList.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转交订单</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+</head>
+<body class="bodybg">
+<div id="common-load">
+    <div id="common-load-bg"></div>
+    <div id="common-load-icon"></div>
+    <div id="common-load-icon1"></div>
+</div>
+<div id="app">
+    <div class="aohList" id="saleSupplierList"></div>
+    <div class="common-msg-w" id="messageBox">
+        <div class="common-msg-c common-msg-confirm">
+            <div class="common-msg-tit" id="common_title"></div>
+            <div class="common-msg-text"></div>
+            <div class="common-msg-menu">
+                <div class="common-msg-cancel">再想想</div>
+                <div class="common-msg-ok">保存</div>
+            </div>
+        </div>
+    </div>
+    <div class="fiedPlace"></div>
+    <div class="fixed">
+        <div id="btn_save_change_handler">保存</div>
+        <div class="aohIcon_send_message aohIcon_send_message_Select" id="aohIcon_send_message"></div>
+        <div id="send_message">消息通知</div>
+    </div>
+</div>
+<script type="text/template" id="saleSupplierTemplate">
+    <% if (it.length<=0 ) { %>
+    <div class="aohItem">无</div>
+    <% } else {
+    for (var i = 0, l = it.length; i < l; i++) {
+        var account = it[i];
+    if (it.id==account.id ) {
+    %>
+    <div class="aohItem1 selected" data-id=<%= account.id %> data-name=<%= account.name %>>
+        <div class="aohIcon1" ></div><%= account.name %>
+    </div>
+    <% } else { %>
+    <div class="aohItem1" data-id=<%= account.id %> data-name=<%= account.name %>>
+        <div class="aohIcon1" ></div><%= account.name %>
+    </div>
+    <% }}}%>
+</script>
+<script src="/supplier/scripts/lib/lib.js"></script>
+<script src="/supplier/scripts/common/common.js"></script>
+<script src="/supplier/scripts/changeOrderhanler.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.button {
+  width: 70%;
+  padding: 4px;
+  font-size: 18px;
+  margin: 10px 10% 10px 10%;
+  border: none;
+  /*background-color:rgb(216,216,216);*/
+  background-color: #34b0ce;
+  color: white;
+}
+#new-roomType .item {
+  position: relative;
+  padding-left: 80px;
+  line-height: 50px;
+  padding-right: 10px;
+}
+.new-roomType-txt {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  line-height: 50px;
+  width: 80px;
+}
+#new-roomType-input {
+  height: 30px;
+  margin-top: 8px;
+  width: 95%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: left;
+  border: 1px solid #02B3CF;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  color:#C0C0C0;
+}

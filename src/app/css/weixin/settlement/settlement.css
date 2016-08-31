@@ -1,0 +1,28 @@
+
+#title{
+	color:white;
+	font-size:18px;
+	padding:10px;
+	text-align:center;
+}
+
+#basic-info table{
+	width:100%;
+	padding:10px 0px;
+	margin: 0px auto 10px auto;
+	background-color: white;
+}
+#basic-info table tr{
+	border-bottom:solid 1px rgb(213,213,213);
+}
+
+#basic-info table td{
+	padding:10px;
+}
+
+#basic-info table td:nth-child(1){
+	text-align:left;
+}
+#basic-info table td:nth-child(2){
+	text-align:right;
+}

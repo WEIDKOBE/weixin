@@ -1,0 +1,265 @@
+<html>
+<head>
+<head>
+  <title>酒店信息</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="stylesheet" href="./css/roomAdd.css" type="text/css">
+  <!-- <link rel="stylesheet" href="./css/priceConfig.css" type="text/css"> -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+  <link rel="stylesheet" href="./css/lCalendar.css" type="text/css">
+
+</head>
+<body class="bodybg">
+<!-- <div id="common-load">
+<div id="common-load-bg"></div>
+<div id="common-load-icon"></div>
+<div id="common-load-icon1"></div>
+</div> -->
+<div id="nav">
+  <div class="nav-item" id="order">
+    <a href="./orderList.html">订单</a>
+  </div>
+  <div class="nav-item nav-item-selected" id="room">
+    <a href="./hotelList.html">酒店信息</a>
+  </div>
+  <div class="nav-item" id="settlement">
+    <a href="./settlement.html">结算</a>
+  </div>
+  <div class="nav-item" id="account">
+    <a href="./accountHome.html">账号</a>
+  </div>
+</div>
+<div id="navPlaceHolder"></div>
+<div disabled="disabled">
+  <div id="hotelName" style="height:32px;text-align:center;background-color:#F8F8F8;padding-top:20px;color:#333333;"></div>
+  <div style="padding-left:10px;background-color:#F8F8F8;font-size:16px;color:#333333;height:27px;padding-top:3px;">物理房型</div>
+  <div id="roomType" class="selectBlock" value="">
+    <div class="item item-flex item-none">
+      <div class="iconArea">
+        <div class="icon"></div>
+      </div>
+      <div class="text"></div>
+    </div>
+  </div>
+   <div style="padding-left:10px;background-color:#F8F8F8;font-size:16px;color:#333333;height:27px;padding-top:3px;">含餐情况</div>
+  <div id="breakfast" class="selectBlock" value="1">
+    <div class="item" value="0">
+      <div class="iconArea">
+        <div class="icon"></div>
+      </div>
+      <div class="text">无早</div>
+    </div>
+    <div class="item" value="1">
+      <div class="iconArea">
+        <div class="icon"></div>
+      </div>
+      <div class="text">单早</div>
+    </div>
+    <div class="item" value="2">
+      <div class="iconArea">
+        <div class="icon"></div>
+      </div>
+      <div class="text">双早</div>
+    </div>
+    <div class="item" value="3">
+      <div class="iconArea">
+        <div class="icon"></div>
+      </div>
+      <div class="text">三早</div>
+    </div>
+    <div class="item" id="item-maximum-breakfast" value="4">
+      <div class="iconArea">
+        <div class="icon"></div>
+      </div>
+      <div class="text reservation-condition-op"">
+        <div style="background-color: #00BBD3;border-radius: 5px;margin: 0px -1px;text-align:center;color:white;border: 1px solid #00bbd3;">
+        <div id="breakfast-condition-red" style="padding-left:2px;margin-right:-3px;width:14px;">-</div>
+        <div id="maximum-breakfast" style="width:30px;color:#333333;background-color:white;border-top: 1px solid #00BBD3;border-bottom:1px solid #00BBD3;">4</div>
+        <div id="breakfast-condition-add" style="padding-right:2px;margin-left:-3px;width:14px;">+</div>
+        </div>
+       <!--  <input type="tel" id="maximum-breakfast" value="4"> -->早
+        </div>
+    </div>
+  </div>
+  <div style="padding-left:10px;background-color:#F8F8F8;font-size:16px;color:#333333;height:27px;padding-top:3px;">付款方式</div>
+  <div id="payMethod" class="selectBlock" value="1">
+    <div class="item" value="1"  id="all-pre">
+      <div class="iconArea">
+        <div class="icon"></div>
+      </div>
+      <div class="text">全部预付</div>
+    </div>
+    <div class="item" value="2">
+      <div class="iconArea">
+        <div class="icon"></div>
+      </div>
+      <div class="text">部分预付</div>
+    </div>
+     <div class="item" value="3">
+      <div class="iconArea">
+        <div class="icon"></div>
+      </div>
+      <div class="text" >到付</div>
+    </div>
+  </div>
+  <div style="padding-left:12px" id="vouchSetTitle">担保设置</div>
+  <div id="vouchSet" class="selectBlock">
+    <div class="item" id="vouchChoice">
+      <div class="iconArea">
+        <div class="icon"></div>
+      </div>
+      <div class="text">担保</div>
+    </div>
+        <div class="item">
+            <div class="iconArea" style="margin:10px 0 0 12px;">
+              担保时间
+            </div>
+            <div class="text" >以后到店需担保</div>
+            <div class="text" >
+                      <select name="" id="select2" style="margin-top:10px;border: 2px solid #00BCD4;font-size:12px;height:24px;border-radius:5px;">
+                              <option value="">00</option>
+                     </select>
+            </div>
+            <div class="text" >:</div>
+            <div class="text" >
+                      <select name="" id="select1" style="margin-top:10px;border: 2px solid #00BCD4;font-size:12px;height:24px;border-radius:5px;">
+                              <option value="">14</option>
+                              <option value="">15</option>
+                              <option value="" selected="selected">16</option>
+                              <option value="">17</option>
+                              <option value="">18</option>
+                              <option value="">19</option>
+                              <option value="">20</option>
+                              <option value="">21</option>
+                              <option value="">22</option>
+                              <option value="">23</option>
+                              <option value="">00</option>
+                              <option value="">01</option>
+                              <option value="">02</option>
+                              <option value="">03</option>
+                              <option value="">04</option>
+                              <option value="">05</option>
+                     </select>
+            </div>
+          </div>
+        <div class="item">
+          <div class="iconArea" style="margin:10px 0 0 12px;">
+            担保方式
+          </div>
+              <div class="text" style="width:100px;">
+                     <select name="" id="select3" style="margin-top:10px;border: 2px solid #00BCD4;font-size:12px;height:24px;border-radius:5px;">
+                              <option value="">首晚担保</option>
+
+                     </select>
+              </div>
+        </div>
+  </div>
+
+ <div style="padding-left:10px;border-bottom:solid 1px #d8d8d8;background-color:#F8F8F8;font-size:16px;color:#333333;height:27px;padding-top:3px;">特殊规则设置</div>
+  <div id="special-role" class="selectBlock" value="1" >
+    <div id="reservation-condition" class="selectBlock" value="1">
+      <!-- <div class="iconArea">
+        <div class="icon"></div>
+      </div> -->
+      <div class="reservation-condition-op">
+        <div style="color:#333333;">提前</div>
+       <div style="background-color: #00BBD3;border-radius: 5px;margin: 0px -1px;border: 1px solid #00bbd3;border-top:0;">
+       <div id="reservation-condition-red" style="padding-left:2px;margin-right:-3px;">-</div>
+       <div id="reservation-condition-display">0</div>
+       <div id="reservation-condition-add" style="padding-right:2px;margin-left:-3px;">+</div>
+     </div>
+        <div style="color:#333333;">
+          天预定
+          <span style="color:#A0A0A0;">(0表示可当天预定)</span>
+        </div>
+      </div>
+      <!-- <div class="reservation-condition-tips">0表示可当天预定</div> -->
+    </div>
+     <div id="continuous-condition" class="selectBlock" value="2" style="border-bottom:none;">
+      <div class="continuous-condition-op">
+        <div style="color:#333333;">连住</div>
+        <div style="background-color: #00BBD3;border-radius: 5px;margin: 0px -1px;border: 1px solid #00bbd3;border-top:0;">
+          <div id="continuous-condition-red" style="padding-left:2px;margin-right:-3px;">-</div>
+          <div id="continuous-condition-display">0</div>
+          <div id="continuous-condition-add" style="padding-right:2px;margin-left:-3px;">+</div>
+        </div>
+        <div style="color:#333333;">晚起预定</div>
+      </div>
+    </div>
+     <div class="item" value="3" style="border-bottom: solid 1px #d8d8d8;padding:10px;font-size:16px;height:50px;padding-bottom:18px;">
+      <div style="overflow:hidden">
+             <div style="color:#333333;">房型预订时间在</div>
+
+            <div style="display:none">
+              <input id="demo1" type="text" readonly="" name="input_date" placeholder="日期选择" data-lcalendar="2011-01-1,2019-12-31" />
+            </div>
+            <div style="display:none">
+              <input id="demo2" type="text" readonly="" name="input_date" placeholder="日期和时间选择" data-lcalendar="2010-01-11,2019-12-31" />
+            </div>
+            <div style="float:left;display:inline-block;width:60px;height:30px;">
+              <input  id="timer1" type="text" readonly="" name="input_date" value= "00:00"  style="width:100%;height:100%;background-color:white;text-align:center;border-width: 0px;border-radius:5px 0 0 5px;font-size:16px;border:2px solid #00BBD3;color:#333333;" />
+            </div>
+           <div style="float:left;font-size:14px;width:20px;height:26px;background-color:#00BBD3;color:white;text-align:center;padding-top:4px;">至</div>
+              <div style="display:none">
+              <input id="demo4" type="text" readonly="" name="input_date" placeholder="日期选择" data-lcalendar="2011-01-1,2019-12-31" />
+            </div>
+            <div style="display:none">
+              <input id="demo5" type="text" readonly="" name="input_date" placeholder="日期和时间选择" data-lcalendar="2010-01-11,2019-12-31" />
+            </div>
+            <div style="float:left;display:inline-block;width:60px;height:30px;">
+              <input  id="timer2" type="text" readonly="" name="input_date" value="23:59"  style="width:100%;height:100%;background-color:white;text-align:center;border-width: 0px;border-radius:0 5px 5px 0;font-size:16px;border:2px solid #00BBD3;color:#333333;"/>
+            </div>
+
+          <div style="padding:3px 0 0 155px;height:30px;color:#333333;">前可以正常预定</div>
+      </div>
+  </div>
+  </div>
+  <div id="operation" style="text-align:center;background-color:#F8F8F8;">
+    <button id="add-product" class="button" style="background-color:#00BBD3;color:white;margin-top:40px;">保存</button>
+    <button id="edit-price" class="button" style="display:none;">编辑日期价格</button>
+    <button id="cancel" class="button" style="background-color:007DA5;margin-bottom:46px;">取消</button>
+  </div>
+  <script src="/supplier/scripts/lib/lib.js"></script>
+  <script src="/supplier/scripts/common/common.js"></script>
+  <script src="./scripts/roomAdd.js"></script>
+  <script src="./scripts/lib/lCalendar.js"></script>
+
+
+  <script>
+        var calendar = new lCalendar();
+      calendar.init({
+        'trigger': '#demo1',
+        'type': 'date'
+      });
+      var calendardatetime = new lCalendar();
+      calendardatetime.init({
+        'trigger': '#demo2',
+        'type': 'datetime'
+      });
+      var calendartime = new lCalendar();
+      calendartime.init({
+        'trigger': '#timer1',
+        'type': 'time'
+      });
+
+        var calendar1 = new lCalendar();
+      calendar1.init({
+        'trigger': '#demo4',
+        'type': 'date'
+      });
+      var calendardatetime1 = new lCalendar();
+      calendardatetime1.init({
+        'trigger': '#demo5',
+        'type': 'datetime'
+      });
+      var calendartime1 = new lCalendar();
+      calendartime1.init({
+        'trigger': '#timer2',
+        'type': 'time'
+      });
+  </script>
+</body>
+</html>

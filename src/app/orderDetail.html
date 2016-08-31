@@ -1,0 +1,125 @@
+<html>
+<head>
+<head>
+  <title>订单详情</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+</head>
+<body class="bodybg">
+  <div id="common-load">
+  <div id="common-load-bg"></div>
+  <div id="common-load-icon"></div>
+  <div id="common-load-icon1"></div>
+</div>
+
+  <div id="app">
+    <!-- <div id="pHead">
+      <div id="pHeadArrow"></div>
+      <div id="pHeadTitle">订单详情</div>
+    </div>
+    <div id="pHeadPlaceHolder"></div> -->
+    <div id="pAccountTop">
+      <div id="pAccountPrice"></div>
+      <div id="pAccountExplain">结算金额</div>
+    </div>
+    <div class="porderList hidden" id="saleFeatList"></div>
+  </div>
+  <script type="text/template" id="featTmpl">
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">状态</div>
+      <div class="plist-li-main">
+        <%= it.status %></div>
+    </div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">订单编号</div>
+      <div class="plist-li-main"><%= it.orderNo %></div>
+    </div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">销售</div>
+      <div class="plist-li-main"><%= it.supplierName %></div>
+    </div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">支付时间</div>
+      <div class="plist-li-main"><%= it.reservationDate %></div>
+    </div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">确认时间</div>
+      <div class="plist-li-main"><%= it.confirmDate || '无' %></div>
+    </div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">酒店确认号</div>
+      <div class="plist-li-main"><%= it.hotelConfirmNo || '无' %></div>
+    </div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">支付方式</div>
+      <div class="plist-li-main"><%= it.paymentMethod || '无' %></div>
+    </div>
+
+    <div class="pitem h20"></div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">酒店</div>
+      <div class="plist-li-main"><%= it.hotelName %></div>
+    </div>
+    <div class="plist-li orderDetail-li" style="display:;">
+      <div class="plist-li-label">房型</div>
+      <div style="width:70%;">
+        <div class="plist-li-main-l plist-li-main" style="padding-right:0;">
+           <%= it.roomtypeName %>/
+        </div>
+        <div class="plist-li-main-l plist-li-main" style="padding-right:0;">
+           <%= it.bedtype %>/
+        </div>
+        <div class="plist-li-main-l plist-li-main" style="padding-right:0;">
+           <%= it.breakfastQty %>/
+        </div>
+        <div class="plist-li-main-l plist-li-main" style="padding-right:0;">
+           <%= it.paymentMethod %>
+        </div>
+        <div class="plist-li-main-l plist-li-main" style="padding-right:0;" id="issurety">
+           <%= '/'+ it.isSurety %>
+        </div>
+        <div class="plist-li-main-l plist-li-main" style="padding-right:0;" id="suretylasttime">
+            <%= '/' + it.suretyLastTime %>
+        </div>
+       </div>
+    </div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">入住日期</div>
+      <div class="plist-li-main"> <%= it.arrivedate %></div>
+    </div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">离店日期</div>
+      <div class="plist-li-main"><%= it.leavedate %></div>
+    </div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">间数</div>
+      <div class="plist-li-main"><%= it.roomCount %></div>
+    </div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">入住人姓名</div>
+      <div class="plist-li-main"><%= it.checkInPeopleName %></div>
+    </div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">房费</div>
+      <div class="plist-li-main"><%= '￥' + it.totalPrice %></div>
+    </div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">担保金额</div>
+      <div class="plist-li-main"><%= '￥' + it.suretyPrice %></div>
+    </div>
+    <div class="plist-li orderDetail-li">
+      <div class="plist-li-label">服务费</div>
+      <div class="plist-li-main"><%= '￥'+ it.supplierPrice %></div>
+    </div>
+  </script>
+  <script src="/supplier/scripts/lib/lib.js"></script>
+  <script src="./scripts/common/common.js"></script>
+  <script src="./scripts/orderDetail.js"></script>
+</body>
+</html>
+<script>
+
+</script>

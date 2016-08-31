@@ -1,0 +1,69 @@
+<html>
+<head>
+<head>
+  <title>登录</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+  <!-- 测试部署 -->
+</head>
+<body class="bodybg">
+  <div id="common-load">
+  <div id="common-load-bg"></div>
+  <div id="common-load-icon"></div>
+  <div id="common-load-icon1"></div>
+</div>
+<div id="nav">
+  <div class="nav-item nav-item-selected" id="order">
+    <a href="./orderList.html">订单</a>
+  </div>
+  <div class="nav-item" id="room">
+    <a href="./hotelList.html">酒店信息</a>
+  </div>
+  <div class="nav-item" id="settlement">
+    <a href="./settlement.html">结算</a>
+  </div>
+  <div class="nav-item" id="account">
+    <a href="./accountHome.html">账号</a>
+  </div>
+</div>
+<div id="navPlaceHolder"></div>
+
+  <div id="navPlaceHolder"></div>
+  <div style="text-align:center;margin-top:50px">
+    <div style="height:70px">
+      <table style="margin: auto;width: 250px">
+        <tr>
+          <td>
+            <input id="phone" type="tel" placeholder="请输入已注册的手机号" maxlength="13" class="login-field" style="width:150px"></td>
+          <td style="padding:0px">
+            <div class="send-button">发送验证码</div>
+          </td>
+        </tr>
+      </table>
+      <div id="error-phone" class="error-msg"></div>
+    </div>
+    <div style="height:70px">
+      <input type="tel" id="verificationCode" placeholder="请输入短信验证码" maxlength="10" class="login-field">
+      <div id="error-code" class="error-msg"></div>
+    </div>
+    <div>
+      <div id="login" class="login login-field">登录</div>
+    </div>
+  </div>
+  <div id="confirm-window">
+    <div id="info-panel">
+      <div style="line-height:2;padding:20px">此账号已与其他微信号绑定，继续登录将会解除其绑定。</div>
+      <div style="height:50px;border-top: solid 2px rgb(229,229,229)">
+        <div id="confirm-button" class="forcelogin" style="background-color:rgb(2,179,207);border-radius:0px 0px 0px 10px;color:white">登录</div>
+        <div id="cancel-button" class="forcelogin" style="color:black">取消</div>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/lib/lib.js"></script>
+  <script src="./scripts/common/common.js"></script>
+  <script src="./scripts/login.js"></script>
+</body>
+</html>

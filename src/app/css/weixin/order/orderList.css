@@ -1,0 +1,347 @@
+hr{
+	border solid 1px rgb(216,216,216);
+}
+#order-tab{
+	/* border:solid 1px rgb(2,179,207);
+	width:100%;
+	height:40px; */
+	color:rgb(2,179,207);
+	background-color:rgb(246,246,246);
+	text-align:center;
+	font-size:14px;
+}
+
+#order-tab div{
+	box-sizing:border-box;
+	margin: 0px;
+	border: solid 1px rgb(2,179,207);
+	padding: 10px 0px;
+	width: 34%;
+	display: inline-block;
+	margin: 0px -2px;
+}
+
+.order-item{
+	border-bottom: solid 1px rgb(216,216,216);
+	padding: 6px 0px;
+	background-color: white;
+	margin: 0px;
+	font-size:14px;
+}	
+.order-item .goto{
+	width: 16px;
+    background-repeat: no-repeat;
+    height: 16px;
+    background-image: url(/supplier/images/icon/back.png);
+    background-size: 50%;
+}
+#order-list td{
+	padding:3px 10px 4px 20px;
+}
+#order-list table{
+	width:100%;
+}
+.order-item div{
+	display:inline-block;
+}
+#order-detail-type1 table{
+	background-color:white;
+	margin:15px 0px 0px 0px;
+	border-collapse:collapse;
+	width:100%;
+}
+#order-detail-type1 td{
+	height:30px;
+	font-size: 14px;
+	border:solid 1px rgb(216,216,216);
+	border-left:none;
+	border-right:none;
+}
+
+#order-detail-type1 td:nth-child(1){
+	width:110px;
+	text-align:left;
+	padding-left: 10px;
+}
+#order-detail-type1 td:nth-child(2){
+	width:170px;
+	text-align:right;
+	padding-right: 10px;
+}
+
+#order-detail-type1 .operate-item{
+	display:inline-block;
+	border:solid 1px rgb(2,179,207);
+	text-align:center;
+	margin:8px auto;
+	background-color:white;
+	border-radius:4px;
+}
+#order-detail-type1 .operate-item button{
+	width:70px;
+	font-size:14px;
+}
+#order-detail-type1 .input{
+	max-width:90%;
+	min-width:90%;
+	width:90%;
+	font-size:14px;
+	padding:10px 10px;
+	outline:none;
+	margin:0px 0px;
+	border:none
+}
+#order-detail-type1 .button{
+	color:rgb(2,179,207);
+	background-color:white;
+	margin-top: 0px;
+	width: 100%;
+}
+#order-detail-type1 .order-detail{
+	padding:10px 0px 10px 20px;
+	line-height:1.3;
+	color:rgb(74,74,74);
+	font-size:15px;
+}
+#order-detail-type2 table{
+	background-color:white;
+	margin:15px 0px 0px 0px;
+	border-collapse:collapse;
+	width:100%;
+}
+#order-detail-type2 td{
+	height:30px;
+	font-size: 14px;
+	border:solid 1px rgb(216,216,216);
+	border-left:none;
+	border-right:none;
+}
+
+#order-detail-type2 td:nth-child(1){
+	width:110px;
+	text-align:left;
+	padding-left: 10px;
+}
+#order-detail-type2 td:nth-child(2){
+	width:170px;
+	text-align:right;
+	padding-right: 10px;
+}
+
+#order-detail-type2 .operate-item{
+	width:85%;
+	border:solid 1px rgb(216,216,216);
+	text-align:center;
+	margin:8px auto;
+	background-color:white;
+	border-radius:4px;
+}
+
+#order-detail-type2 .input{
+	max-width:90%;
+	min-width:90%;
+	width:90%;
+	font-size:14px;
+	padding:10px 10px;
+	outline:none;
+	margin:0px 0px;
+	border:none
+}
+#order-detail-type2 .button{
+	color:white;
+	margin-top: 0px;
+	width: 100%;
+}
+#order-detail-type2 .order-detail{
+	padding:10px 0px 10px 20px;
+	line-height:1.5;
+	color:rgb(74,74,74);
+	font-size:15px;
+}
+.selectBlock{
+	background-color:white;
+	color:rgb(155,155,155);
+	font-size:15px;
+}
+
+.selectBlock .item .iconArea{
+	float:left;
+	/*width:25%;*/
+}
+.selectBlock .item .icon{
+	background-repeat:no-repeat;
+	margin: 0px 10px;
+	width: 30px;
+	height: 30px;
+}
+
+.selectBlock .item .green{
+	background-image: url(/supplier/images/icon/green.png);
+}
+.selectBlock .item .gray{
+	background-image: url(/supplier/images/icon/gray.png);
+}
+
+.selectBlock .item .text{
+	/*float:right;*/
+	/*font-size:16px;*/
+	text-align:left;
+	/*width:74%;*/
+	padding:5px 20px;
+}
+.forcelogin{
+	height: 50px;
+	float:left;
+	font-size:16px;
+	padding:17px;
+	box-sizing:border-box;
+	width:50%;
+	text-align:center;
+}
+#live-condition table{
+	width: 85%;
+    margin: 15px auto;
+    margin-bottom: 0px;
+}
+#live-condition td:nth-child(2){
+	border:none;
+	text-align: left;
+}
+#live-condition td:nth-child(1){
+	border:none;
+}
+
+#live-condition input{
+	margin: 0px;
+    width: 14px;
+    height: 14px;
+}
+#live-condition .addition{
+	display:none;
+}
+.button-new-message-mark:before{
+	font-size: 10px;
+    position: absolute;
+    content: attr(msgCount);
+    color: white;
+    display: inline-block;
+    border: none;
+    width: 13px;
+    height: 13px;
+    background-color: red;
+    border-radius: 100%;
+    margin-left: 50px;
+    margin-top: -15px;
+    padding: 1px;
+    line-height: 13px;
+}
+.list-new-message-mark:before{
+    float: right;
+    text-align: center;
+    font-size: 12px;
+    content: attr(msgCount);
+    color: white;
+    display: inline-block;
+    border: none;
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    border-radius: 100%;
+    margin-left: -10px;
+    margin-top: -10px;
+    padding: 2px;
+    line-height:12px;
+}
+
+#order-operate-history .order-operate-list{
+	margin-left: 25px;
+    padding-left: 0px;
+    margin-right: 20px;
+    border-left: solid 1px rgb(216,216,216);
+}
+#order-operate-history .order-operate-list .order-operate-passed-mark{
+	height: 10px;
+    width: 10px;
+    float: left;
+    background-color: rgb(216,216,216);
+    border-radius: 100%;
+    margin-left: -6px;
+}
+#order-operate-history .order-operate-list .order-operate-current-big-mark{
+	height: 14px;
+    width: 14px;
+    float: left;
+    background-color: white;
+    border:solid 1px rgb(2,179,216);
+    border-radius: 100%;
+    margin-left: -8px;
+}
+#order-operate-history .order-operate-list .order-operate-current-big-mark .order-operate-current-small-mark{
+	height: 10px;
+    width: 10px;
+    float: left;
+    background-color: rgb(2,179,216);
+    border-radius: 100%;
+    margin: 2px;
+}
+#order-operate-history .order-operate-list .order-operate-item{
+	margin-top:10px;
+	color:rgb(160,160,160);
+}
+#order-operate-history .order-operate-list .order-operate-info{
+	margin-left:15px;
+}
+#order-operate-history .order-operate-list .order-operate-info.current{
+	margin-left:15px;
+	color:rgb(2,179,216);
+}
+#order-operate-history .order-operate-list .order-operate-info .order-operate-status{
+	font-size:15px;
+	margin-bottom:10px;
+}
+#order-operate-history .order-operate-list .order-operate-info .order-operate-description{
+	font-size:12px;
+	margin-bottom:10px;
+}
+#order-operate-history .order-operate-list .order-operate-info .order-operate-time{
+	font-size:12px;
+	text-align:right;
+}
+
+#myorder-more {
+  display: none;
+  line-height: 40px;
+  height: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #aaa;
+  position: relative;
+}
+#myorder-loading{
+  background: url(/supplier/images/loading.gif) no-repeat;
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -10px;
+  margin-left: -50px;
+}
+
+#myorder-moreNo {
+  display: none;
+  line-height: 40px;
+  height: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #aaa;
+}
+
+
+
+
+
+
+
+

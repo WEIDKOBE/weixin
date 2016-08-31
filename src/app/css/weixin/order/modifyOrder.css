@@ -1,0 +1,166 @@
+.tab{
+    background-color: rgb(2,179,216);
+}
+.tab img{
+	height: 40px;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px 5px;
+}
+.tab .title{
+	height: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+.panel .order-detail{
+	padding:10px 0px 10px 20px;
+	line-height:1.3;
+	color:rgb(74,74,74);
+	font-size:15px;
+	line-height: 1.5;
+}
+.panel .sub-panel{
+	background-color:white;
+	margin-bottom:10px;
+}
+.panel .sub-panel .info {
+    box-sizing: border-box;
+    padding: 6px 20px;
+}
+.panel .sub-panel .modify-item{
+	border-bottom:1px solid rgb(216,216,216);
+	    padding: 5px 0px;
+}
+.panel .sub-panel .modify-item .goto{
+	margin-top:-25px;
+	float: right;
+    width: 20px;
+    background-repeat: no-repeat;
+    height: 20px;
+    background-image: url(/supplier/images/icon/back.png);
+}
+.order-collect-price-adjust .price-change-item input{
+	font-size: 15px;
+    border: solid 1px rgb(216,216,216);
+    width: 150px;
+    padding: 5px;
+}
+.order-price-adjust .price-change-item,.order-collect-price-adjust .price-change-item{
+	box-sizing: border-box;
+    padding: 10px 20px;
+}
+.order-price-adjust .price-change-item>div,.order-collect-price-adjust .price-change-item>div{
+	display:inline-block;
+	box-sizing:border-box;
+	height:20px;
+}
+.checkbox-mark{
+	display:inline-block;
+}
+.checkbox-mark .mark-big-circle{
+	width: 20px;
+    height: 20px;
+    border: 1px solid rgb(2,179,216);
+    border-radius: 100%;
+}
+.checkbox-mark .mark-small-circle{
+	width: 10px;
+    height: 10px;
+    background-color: rgb(2,179,216);
+    border-radius: 100%;
+    margin:5px;
+}
+.order-price-adjust .price-change-item .label{
+	font-size: 16px;
+    padding: 2px;
+    margin: 0px 15px 0px 5px;
+}
+.order-price-adjust .price-change-item input{
+	font-size: 15px;
+    border: solid 1px rgb(216,216,216);
+    width: 100px;
+    padding: 5px;
+}
+.order-operate-button{
+	text-align:center;
+	margin-top:70px;
+	margin-bottom: 50px;
+}
+#main-panel .order-operate-button button,
+#change-product-panel .order-operate-button button,
+#change-date-panel .order-operate-button button{
+	width: 40%;
+    border: solid 1px rgb(2,179,207);
+    padding: 10px;
+    background-color: white;
+    color: rgb(2,179,216);
+}
+
+/*** product list ***/
+#change-product-panel .product-list-item .hotel-info{
+	padding:10px 20px;
+	border-bottom: solid 1px rgb(216,216,216);
+}
+#change-product-panel .product-list-item .hotel-info .hotel-name{
+	display:inline-block;
+}
+#change-product-panel .product-list-item .hotel-info .pull{
+	float: right;
+    display: inline-block;
+    border-bottom: 15px solid rgb(168,168,168);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+#change-product-panel .product-list-item .hotel-info .expand{
+	float: right;
+    display: inline-block;
+    border-top: 15px solid rgb(168,168,168);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+#change-product-panel .product-list-item ul{
+	padding-left:10px;
+	margin:0px;
+	background-color: rgb(246,246,246);
+}
+#change-product-panel .product-list-item ul li{
+	list-style-type: none;
+	border-bottom:1px solid rgb(216,216,216);
+}
+#change-product-panel .product-list-item ul li>div{
+	display: inline-block;
+}
+#change-product-panel .product-list-item ul li .checkbox-mark{
+	float: left;
+    padding: 5px;
+}
+#change-product-panel .product-list-item ul li .label{
+	font-size: 16px;
+    padding: 10px 5px;
+}
+
+/*** date selector  ***/
+#change-date-panel .date-select-item{
+	text-align: center;
+    padding: 10px;
+}
+#change-date-panel .date-select-item input{
+	padding:5px;
+}
+#change-date-panel .warn-tips{
+	text-align:center;
+	color:orange;
+	font-size:10px;
+	display:none;
+}
+.forcelogin{
+	height: 50px;
+	float:left;
+	font-size:16px;
+	padding:17px;
+	box-sizing:border-box;
+	width:50%;
+	text-align:center;
+}

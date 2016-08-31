@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>账号管理</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+<body class="bodybg">
+  <div id="common-load">
+  <div id="common-load-bg"></div>
+  <div id="common-load-icon"></div>
+  <div id="common-load-icon1"></div>
+</div>
+
+  <div id="app">
+    <!-- <div id="pHead">
+      <div id="pHeadArrow"></div>
+      <div id="pHeadTitle"></div>
+    </div>
+    <div id="pHeadPlaceHolder"></div> -->
+    <!-- <div class="aohTitle">尚未分配的酒店</div> -->
+    <div class="aohList" id="unAssignedHotel"></div>
+    <!--<div class="aohTitle" style="padding-top: 20px">已经分配的酒店</div>-->
+    <div class="aohList" id="assignedHotel"></div>
+    <div class="common-msg-w" id="messageBox">
+      <div class="common-msg-c common-msg-confirm">
+        <div class="common-msg-tit">保存修改</div>
+        <div class="common-msg-text"></div>
+        <div class="common-msg-menu">
+          <div class="common-msg-cancel">再想想</div>
+          <div class="common-msg-ok">保存</div>
+        </div>
+      </div>
+    </div>
+    <div class="fiedPlace"></div>
+    <div class="fixed">
+      <div id="btn_save">保存</div>
+    </div>
+  </div>
+  <script type="text/template" id="unAssignedHotelTmpl">
+    <% if (it.unAssignedHotel.length<=0 && it.selfHotel.length<=0) { %>
+      <div class="aohItem">无</div>
+    <% } else {
+      for (var i = 0, l = it.selfHotel.length; i < l; i++) {
+        var hotel = it.selfHotel[i];
+    %>
+      <div class="aohItem">
+        <div class="aohIcon aohIconSelect" data-hotelid=<%= hotel.id %>></div>
+        <%= hotel.name %>
+      </div>
+    <% }
+      for (var i = 0, l = it.unAssignedHotel.length; i < l; i++) {
+        var hotel = it.unAssignedHotel[i];
+    %>
+      <div class="aohItem">
+        <div class="aohIcon" data-hotelid=<%= hotel.id %>></div>
+        <%= hotel.name %>
+      </div>
+    <% }}%>
+
+  </script>
+  <script type="text/template" id="assignedHotelTmpl">
+    <% if (it.length<=0) { %>
+      <div class="aohItem">无</div>
+    <% } else {
+      for (var i = 0, l = it.length; i < l; i++) {
+        var hotel = it[i];
+    %>
+      <div class="aohItem">
+        <% if (hotel.selected) { %>
+          <div class="aohIcon aohIconSelect" data-hotelid=<%= hotel.id %>></div>
+        <% } else { %>
+          <div class="aohIconGray" data-hotelid=<%= hotel.id %>></div>
+        <% } %>
+        <%= hotel.name %>
+        <span><%= hotel.salesPerson %></span>
+      </div>
+    <% }}%>
+  </script>
+  <script src="/supplier/scripts/lib/lib.js"></script>
+  <script src="/supplier/scripts/common/common.js"></script>
+  <script src="/supplier/scripts/accountOperationHotel.js"></script>
+</body>
+</html>

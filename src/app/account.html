@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>账号管理</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+<body class="bodybg">
+  <div id="common-load">
+ <div id="common-load-bg"></div>
+ <div id="common-load-icon"></div>
+ <div id="common-load-icon1"></div>
+</div>
+<div id="nav">
+ <div class="nav-item" id="order">
+  <a href="./orderList.html">订单</a>
+ </div>
+ <div class="nav-item" id="room">
+  <a href="./hotelList.html">酒店信息</a>
+ </div>
+ <div class="nav-item" id="settlement">
+  <a href="./settlement.html">结算</a>
+ </div>
+ <div class="nav-item nav-item-selected" id="account">
+  <a href="./accountHome.html">账号</a>
+ </div>
+</div>
+<div id="navPlaceHolder"></div>
+
+
+  <div id="app">
+    <div id="ptabs">
+      <div class="ptab pselect" id="ptabuser">我的信息</div>
+      <div class="ptab" id="ptabmanager">管理其他账号</div>
+    </div>
+    <div class="plist" id="puser">
+      <div class="plist-li" id="modifyName" data-name="" data-tel="">
+        <div class="plist-li-label">姓名</div>
+        <div class="plist-li-main">
+          <span id="pname"></span>
+          <span class="iconRightArrow"></span>
+        </div>
+      </div>
+      <div class="plist-li" id="modifyPhone" data-name="" data-tel="">
+        <div class="plist-li-label">手机</div>
+        <div class="plist-li-main">
+          <span id="ptel"></span>
+          <span class="iconRightArrow"></span>
+        </div>
+      </div>
+      <div class="plist-li">
+        <div class="plist-li-label">上班</div>
+        <div class="plist-li-main">
+          <div class="switcha" id="switcha"></div>
+        </div>
+      </div>
+      <div class="pitem h20"></div>
+      <div class="plist-li" id="pcitynamebox">
+        <div class="plist-li-label">城市经理</div>
+        <div class="plist-li-main">
+          <span id="pcityname"></span>
+        </div>
+      </div>
+      <div class="plist-li" id="pcitytelbox">
+        <div class="plist-li-label">手机</div>
+        <div class="plist-li-main" id="pGoTel" data-tel="">
+          <span id="pcitytel"></span>
+          <span class="pGoTelTxt">打电话</span>
+          <span class="iconRightArrow"></span>
+        </div>
+      </div>
+    </div>
+    <div class="plist" id="pmanger"></div>
+    <div id="ploginout">
+      <p>退出登录</p>
+    </div>
+  </div>
+  <div class="common-msg-w" id="messageBox">
+    <div class="common-msg-c common-msg-confirm">
+      <div class="common-msg-tit">要退出登录吗？</div>
+      <div class="common-msg-text"></div>
+      <div class="common-msg-menu">
+        <div class="common-msg-cancel">再想想</div>
+        <div class="common-msg-ok">退出登录</div>
+      </div>
+    </div>
+  </div>
+  <script type="text/template" id="pmangerTmpl"><% if(it.finance.length <= 0) { %>
+        <div class="pitem">财务</div>
+        <div class="psellItem cw">
+          <div class="plist-li-label">现在设置</div>
+          <div class="plist-li-main"><span class="iconRightArrow"></span></div>
+        </div>
+      <%
+        } else {
+        for (var i = 0, l = it.finance.length; i < l; i++) {
+          var finance = it.finance[i];
+      %>
+        <div class="pitem">财务</div>
+        <div class="psellItem cw"
+          data-name="<%= finance.name %>"
+          data-tel="<%= finance.phone %>"
+          data-id="<%= finance.id %>"
+          data-roleid="<%= finance.roleId %>">
+          <div class="psellItemName">
+            <%= finance.name %>
+          </div>
+          <div class="plist-li-main"><span class="iconRightArrow"></span></div>
+        </div>
+      <% } }%>
+
+      <% if(it.seller.length <= 0) { %>
+        <div id="psellbox">
+          <div class="psellHead">销售 <span id="psellAdd">添加销售</span></div>
+        </div>
+      <% } else { %>
+        <div id="psellbox">
+          <div class="psellHead">销售 <span id="psellAdd">添加销售</span></div>
+          <div class="psellTable" id="psellTable">
+          <%
+            for (var i = 0, l = it.seller.length; i < l; i++) {
+            var seller = it.seller[i];
+          %>
+            <div class="psellItem"
+              data-id="<%= seller.id %>"
+              data-roleid="<%= seller.roleId %>">
+              <div class="psellItemName">
+                <%= seller.name %>
+              </div>
+              <div class="psellItemOrder">
+                <div class="psellItemOrderNum"><%= seller.lmOrderCount %></div>
+                <div class="psellItemOrderLabel">上月总订单数</div>
+              </div>
+              <div class="psellItemPrice">
+                <div class="psellItemPriceNum">￥<%= seller.lmOrderTotal || 0 %></div>
+                <div class="psellItemPriceLabel">上月订单总额</div>
+                <span class="iconRightArrow"></span>
+              </div>
+            </div>
+          <% } %></div>
+        </div>
+      <% }%></script>
+  <script src="/supplier/scripts/lib/lib.js"></script>
+  <script src="/supplier/scripts/common/common.js"></script>
+  <script src="/supplier/scripts/account.js"></script>
+</body>
+</html>

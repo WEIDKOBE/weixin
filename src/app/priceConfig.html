@@ -1,0 +1,83 @@
+<html>
+<head>
+<head>
+  <title>酒店信息</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="stylesheet" href="./css/priceConfig.css" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+</head>
+<body class="bodybg">
+  <div id="common-load">
+  <div id="common-load-bg"></div>
+  <div id="common-load-icon"></div>
+  <div id="common-load-icon1"></div>
+</div>
+<div id="nav">
+  <div class="nav-item" id="order">
+    <a href="./orderList.html">订单</a>
+  </div>
+  <div class="nav-item nav-item-selected" id="room">
+    <a href="./hotelList.html">酒店信息</a>
+  </div>
+  <div class="nav-item" id="settlement">
+    <a href="./settlement.html">结算</a>
+  </div>
+  <div class="nav-item" id="account">
+    <a href="./accountHome.html">账号</a>
+  </div>
+</div>
+<div id="navPlaceHolder"></div>
+
+  <div id="hotelName" style="height:20px;padding:10px;text-align:center;background-color:rgb(236,236,242)"></div>
+  <div id="wrapper">
+    <div class="select-parent">
+      <select id="product" disabled="disabled"></select>
+    </div>
+    <div id="calendar-head" style="background-color:rgb(216,216,216)">
+      <div id="date" style="font-size:12px;padding:15px 10px"></div>
+    </div>
+    <div id="reservation-condition" class="selectBlock" value="1" style="display:none">
+      <div class="reservation-condition-op">
+        <div>提前</div>
+        <div style="border: solid 1px rgb(2,179,216);border-radius: 5px;margin: 0px 15px">
+          <div id="reservation-condition-red">-</div>
+          <div id="reservation-condition-display">0</div>
+          <div id="reservation-condition-add">+</div>
+        </div>
+        <div>天预定</div>
+      </div>
+      <div class="reservation-condition-tips">0表示可当天预定</div>
+    </div>
+    <div id="plan" style="margin:20px auto">
+      <div id="arrive-price-container" class="edit-item" style="display:none">
+        <div class="edit-field">结算价</div>
+        <div class="edit-value">
+          <input type="tel" id="arrive-price" class="price"></div>
+      </div>
+      <div id="arrive-price-warn" style="color:red;font-size:12px;width:250px;margin:5px auto 0px auto"></div>
+      <div id="settlement-price-container" class="edit-item" >
+        <div class="edit-field">结算价</div>
+        <div class="edit-value">
+          <input type="tel" id="settlementPrice" class="price"></div>
+      </div>
+      <div id="price-warn" style="color:red;font-size:12px;width:250px;margin:5px auto 0px auto"></div>
+      <div class="edit-item">
+        <div class="edit-field">房量</div>
+        <div class="edit-value">
+          <input type="tel" id="room-count"></div>
+      </div>
+      <div id="count-warn" style="color:red;font-size:12px;width:250px;margin:5px auto 0px auto"></div>
+    </div>
+    <div id="operation" style="text-align:center">
+      <button id="add-product" class="button">保存</button>
+      <button id="cancel" class="button" style="background-color:rgb(115,216,229)">取消</button>
+    </div>
+  </div>
+  <script src="/supplier/scripts/lib/lib.js"></script>
+  <script src="/supplier/scripts/common/common.js"></script>
+  <script src="./scripts/priceConfig.js"></script>
+</body>
+</html>

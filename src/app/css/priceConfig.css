@@ -1,0 +1,88 @@
+#calendar-head td div:nth-child(1) {
+  padding-bottom: 10px;
+}
+.button {
+  width: 280px;
+  padding: 10px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  line-height:1.2;
+  /*background-color:rgb(216,216,216);*/
+  background-color: #34b0ce;
+  color: white;
+}
+#plan tr td:nth-child(1) {
+  font-size: 14px;
+  padding: 20px 20px 20px 0px;
+  text-align: right;
+  width: 30%;
+}
+#plan input {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  padding: 7px 0px;
+  text-align: center;
+}
+.edit-item {
+  font-size: 15px;
+  margin: 15px auto 0px auto;
+  width: 280px;
+  height: 35px;
+  border: solid 1px #d8d8d8;
+  border-radius: 10px;
+}
+.edit-field {
+  border-radius: 7px 0px 0px 7px;
+  background-color: #d8d8d8;
+  line-height: 36px;
+  text-align: center;
+  border-right: solid 1px #d8d8d8;
+  width: 90px;
+  height: 36px;
+  box-sizing: border-box;
+  display:inline-block;
+}
+.edit-value {
+  height: 35px;
+  display:inline-block;
+}
+#note {
+  padding-top: 5px;
+  height: 20px;
+  width: 280px;
+  margin: auto;
+  color: #596fe6;
+  font-size: 12px;
+}
+#reservation-condition {
+  padding: 10px;
+}
+.reservation-condition-op div {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 30px;
+}
+#reservation-condition > div.reservation-condition-op > div:nth-child(2) div {
+  font-size: 20px;
+  color: #02b2d8;
+  width: 40px;
+  text-align: center;
+  line-height: 24px;
+}
+#reservation-condition-red {
+  border-right: solid 1px #02b2d8;
+}
+#reservation-condition-add {
+  border-left: solid 1px #02b2d8;
+}
+#reservation-condition > div.reservation-condition-op > div:nth-child(2) div#reservation-condition-display {
+  font-size: 16px;
+  color: #555555;
+}
+.reservation-condition-tips {
+  font-size: 12px;
+  color: #888888;
+  margin-top: 10px;
+}

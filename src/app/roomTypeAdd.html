@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+<head>
+  <title>酒店信息</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="stylesheet" href="./css/roomTypeAdd.css" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+</head>
+<body class="bodybg">
+  <div id="common-load">
+  <div id="common-load-bg"></div>
+  <div id="common-load-icon"></div>
+  <div id="common-load-icon1"></div>
+</div>
+<div id="nav">
+  <div class="nav-item" id="order">
+    <a href="./orderList.html">订单</a>
+  </div>
+  <div class="nav-item nav-item-selected" id="room">
+    <a href="./hotelList.html">酒店信息</a>
+  </div>
+  <div class="nav-item" id="settlement">
+    <a href="./settlement.html">结算</a>
+  </div>
+  <div class="nav-item" id="account">
+    <a href="./accountHome.html">账号</a>
+  </div>
+</div>
+<div id="navPlaceHolder"></div>
+
+  <div id="hotelName" style="height:20px;padding:13px 10px 13px 10px;text-align:center; margin-top: 6px;color:#333333;"></div>
+  <div id="new-roomType" class="selectBlock" value="" style="border-bottom:none;">
+    <div class="item">
+      <span class="new-roomType-txt" style="color:#333333;">房型名称:</span>
+      <input id="new-roomType-input" type="text" placeholder="请输入房型名称并保存"></div>
+  </div>
+  <div id="bedType" class="selectBlock" value="2">
+    <div class="item" value="0">
+      <div class="iconArea">
+        <div class="icon gray"></div>
+      </div>
+      <div class="text">大床</div>
+    </div>
+    <div class="item" value="1">
+      <div class="iconArea">
+        <div class="icon gray"></div>
+      </div>
+      <div class="text">双床</div>
+    </div>
+    <div class="item" value="2">
+      <div class="iconArea">
+        <div class="icon green"></div>
+      </div>
+      <div class="text">大床或双床</div>
+    </div>
+  </div>
+  <div id="operation" style="text-align:center;background-color:#F8F8F8;">
+    <button id="add-roomType" class="button" style="background-color:#01B3CF;color:white;margin-top:78px;">保存添加</button>
+    <button id="cancel" class="button" style="background-color:#007DA5;">取消</button>
+  </div>
+  <script src="/supplier/scripts/lib/lib.js"></script>
+  <script src="/supplier/scripts/common/common.js"></script>
+  <script src="/supplier/scripts/roomTypeAdd.js"></script>
+</body>
+</html>

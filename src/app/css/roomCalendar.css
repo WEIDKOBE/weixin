@@ -1,0 +1,110 @@
+#calendar-head td {
+  border-right: solid 1px #02b3cf;
+  height: 40px;
+  padding: 0px;
+}
+#calendar-head td div {
+  padding-top: 12px;
+  height: 100%;
+}
+.bg-theme {
+  background-color: #02b3cf;
+  color: white;
+}
+.calendar-month table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.month-item td {
+  text-align: center;
+  font-size: 10px;
+  height: 46px;
+  width: 14%;
+  border: solid 1px #b4e7f2;
+  background-color: white;
+}
+.month-item .name {
+  padding: 15px 0px 5px 0px;
+  text-align: center;
+}
+.price {
+  color: black;
+}
+.clear-border-background {
+  background-color: transparent;
+  border: none;
+}
+#fixed-footer {
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  bottom: 0px;
+  padding: 10px 0px 0px 0px;
+}
+#confirm {
+  display: none;
+  color: white;
+  font-size: 16px;
+  width: 80%;
+  border-radius: 5px;
+  margin: 0px auto 15px auto;
+  background-color: #02b3cf;
+  text-align: center;
+  padding: 10px 0px;
+}
+#fullRoom {
+  display: none;
+  color: white;
+  font-size: 16px;
+  width: 80%;
+  border-radius: 5px;
+  margin: 0px auto 15px auto;
+  background-color: #02b3cf;
+  text-align: center;
+  padding: 10px 0px;
+}
+#delete-product {
+  color: white;
+  font-size: 16px;
+  width: 80%;
+  border-radius: 5px;
+  margin: 0px auto 10px auto;
+  background-color: #7ad8e4;
+  text-align: center;
+  padding: 10px 0px;
+}
+#quick-select {
+  margin: 10px;
+}
+.selectBlock {
+  background-color: white;
+  color: #9b9b9b;
+  font-size: 15px;
+}
+.selectBlock .item {
+  width: 49%;
+  display: inline-block;
+}
+.selectBlock .item .iconArea {
+  float: left;
+  /*width:25%;*/
+}
+.selectBlock .item .icon {
+  background-repeat: no-repeat;
+  margin: 0px;
+  width: 30px;
+  height: 30px;
+}
+.selectBlock .item .green {
+  background-image: url(/supplier/images/green.png);
+}
+.selectBlock .item .gray {
+  background-image: url(/supplier/images/gray.png);
+}
+.selectBlock .item .text {
+  /*float:right;*/
+  /*font-size:16px;*/
+  text-align: left;
+  /*width:74%;*/
+  padding: 5px 20px;
+}

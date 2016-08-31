@@ -1,0 +1,113 @@
+<html>
+<head>
+<head>
+  <title>房态</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="stylesheet" href="./css/roomCalendar.css" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></head>
+</head>
+<body class="bodybg">
+  <div id="common-load">
+  <div id="common-load-bg"></div>
+  <div id="common-load-icon"></div>
+  <div id="common-load-icon1"></div>
+</div>
+<div id="nav">
+  <div class="nav-item" id="order">
+    <a href="./orderList.html">订单</a>
+  </div>
+  <div class="nav-item nav-item-selected" id="room">
+    <a href="./hotelList.html">酒店信息</a>
+  </div>
+  <div class="nav-item" id="settlement">
+    <a href="./settlement.html">结算</a>
+  </div>
+  <div class="nav-item" id="account">
+    <a href="./accountHome.html">账号</a>
+  </div>
+</div>
+<div id="navPlaceHolder"></div>
+
+  <div id="wrapper">
+    <div id="hotelName" style="height:20px;padding:10px;text-align:center;background-color:rgb(236,236,242)"></div>
+    <div class="select-parent">
+      <select id="product" style="border:none;outline:none"></select>
+    </div>
+    <div id="calendar-head" style="background-color:white">
+      <div style="width:100%;margin:auto; box-sizing: border-box;border: solid 1px rgb(2,179,207);background-color:rgb(216,216,216)">
+        <table style="width:100%;border-collapse:collapse;text-align:center;table-layout:fixed">
+          <tr style="height:40px">
+            <td value="0">
+              <div>日</div>
+            </td>
+            <td value="1">
+              <div>一</div>
+            </td>
+            <td value="2">
+              <div>二</div>
+            </td>
+            <td value="3">
+              <div>三</div>
+            </td>
+            <td value="4">
+              <div>四</div>
+            </td>
+            <td value="5">
+              <div>五</div>
+            </td>
+            <td value="6" style="border:none">
+              <div>六</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="calendar-area">
+      <div style="width:100%;margin:auto">
+        <div class="month-item" style="display:none">
+          <div class="name">2015/04</div>
+          <div class="calendar-month">
+            <table style="table-layout:fixed">
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="fixed-footer">
+      <div id="quick-select" class="selectBlock" style="display:none">
+        <div id="weekDay" class="item">
+          <div class="iconArea">
+            <div class="icon gray"></div>
+          </div>
+          <div class="text">周一到周四</div>
+        </div>
+        <div id="weekend" class="item">
+          <div class="iconArea">
+            <div class="icon gray"></div>
+          </div>
+          <div class="text">周五到周日</div>
+        </div>
+      </div>
+      <div id="confirm">下一步</div>
+      <div id="fullRoom">满房</div>
+      <div id="delete-product" style="display:none">删除产品</div>
+    </div>
+    <div style="height:160px"></div>
+  </div>
+  <script src="./scripts/lib/lib.js"></script>
+  <script src="./scripts/common/common.js"></script>
+  <script src="./scripts/roomCalendar.js"></script>
+</body>
+</html>
